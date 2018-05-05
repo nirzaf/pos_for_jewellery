@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(In_certi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -78,7 +78,6 @@
             this.btnaddstock = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnremovestock = new System.Windows.Forms.Button();
-            this.tickspec = new System.Windows.Forms.CheckBox();
             this.lblNoPieces = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSpecification = new System.Windows.Forms.TextBox();
@@ -675,17 +674,6 @@
             this.btnremovestock.UseVisualStyleBackColor = true;
             this.btnremovestock.Click += new System.EventHandler(this.btnremovestock_Click);
             // 
-            // tickspec
-            // 
-            this.tickspec.AutoSize = true;
-            this.tickspec.Location = new System.Drawing.Point(906, 44);
-            this.tickspec.Margin = new System.Windows.Forms.Padding(2);
-            this.tickspec.Name = "tickspec";
-            this.tickspec.Size = new System.Drawing.Size(15, 14);
-            this.tickspec.TabIndex = 195;
-            this.tickspec.UseVisualStyleBackColor = true;
-            this.tickspec.Visible = false;
-            // 
             // lblNoPieces
             // 
             this.lblNoPieces.AutoSize = true;
@@ -863,7 +851,6 @@
             this.groupBox2.Controls.Add(this.txtCost);
             this.groupBox2.Controls.Add(this.dgvItem);
             this.groupBox2.Controls.Add(this.txtSpecification);
-            this.groupBox2.Controls.Add(this.tickspec);
             this.groupBox2.Controls.Add(this.cmbItmTyp);
             this.groupBox2.Controls.Add(this.lblSpecification);
             this.groupBox2.Controls.Add(this.lblGemWeight);
@@ -1106,25 +1093,25 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 8F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column1.HeaderText = "No";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 8F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column2.HeaderText = "Stock_Type";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 8F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column3.HeaderText = "Stock_No";
             this.Column3.Name = "Column3";
             // 
@@ -1243,7 +1230,6 @@
         private System.Windows.Forms.Button btnaddstock;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnremovestock;
-        private System.Windows.Forms.CheckBox tickspec;
         private System.Windows.Forms.Label lblNoPieces;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSpecification;

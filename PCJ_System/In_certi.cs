@@ -146,19 +146,7 @@ namespace PCJ_System
 
         private void ST_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbItmTyp.Text == null)
-            {
-
-                textBox1.Enabled = false;
-
-            }
-            if (cmbItmTyp.Text != null)
-            {
-
-                textBox1.Enabled = true;
-            }
-
-            if (cmbItmTyp.Text == "GEM")
+            if (cmbItmTyp.SelectedIndex == 0)
             {
                 textBox1.Text = "";
                 txtNoPieces.Visible = true;
