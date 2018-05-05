@@ -1,0 +1,569 @@
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINAL PCJ\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_System\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk1\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk1\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk1\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.In_Cert.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.Stock_Control.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\now\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.In_Cert.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.Stock_Control.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\System\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.In_Cert.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.Stock_Control.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\BACKUP\bk5\System\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.In_Cert.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.Stock_Control.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\CCC\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.In_Cert.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.Stock_Control.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\try main\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\FOLDER\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Downloads\1\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\New folder (2)\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\New folder (2)\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\New folder (2)\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\FINNAL\What i did with  PCJ_System\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.IMages.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.IMages.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.IMages.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.IMages.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\PCJ_SYSTEM - Copy - Copy\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.IMages.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try images\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\bin\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\bin\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.IMages.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Login.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.pdb
+C:\Users\Mohamed Arafath\Desktop\try images - Copy\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed Arafath\Desktop\BACKUP OF SYSTEM\try images - 3\PCJ_System\bin\Debug\PCJ_System.exe.config
+C:\Users\Mohamed Arafath\Desktop\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.exe
+C:\Users\Mohamed Arafath\Desktop\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 3\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 4\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 5 stockcontroler gems&Jewel view\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 6\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 7\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8Clean the code\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 8 Clean the code\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Foriegn_Currency_Update.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 9 invoice part\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\bin\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\bin\Debug\PCJ_System.pdb
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Foriegn_Currency_Update.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Login.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 Invoice\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 REsizing\PCJ_System\bin\Debug\PCJ_System.exe.config
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 REsizing\PCJ_System\obj\Debug\PCJ_System.exe
+E:\DESKTOP\BACKUP OF SYSTEM\try images - 10 REsizing\PCJ_System\obj\Debug\PCJ_System.pdb
+D:\New folder\PROject\PCJ_System\bin\Debug\PCJ_System.exe.config
+D:\New folder\PROject\PCJ_System\obj\Debug\PCJ_System.exe
+D:\New folder\PROject\PCJ_System\obj\Debug\PCJ_System.pdb
+D:\PCJ\PROject\PCJ_System\bin\Debug\PCJ_System.exe.config
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.exe
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.pdb
+D:\PCJ\PROject\PCJ_System\bin\Debug\PCJ_System.exe
+D:\PCJ\PROject\PCJ_System\bin\Debug\PCJ_System.pdb
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Admin_Menu.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.DashBoard.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Foriegn_Currency_Update.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Invoice_Certificate.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.In_certi.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Login.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.NewUser.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.OutStanding_of_Stocks.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Properties.Resources.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Status_of_Stocks.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.SCStocks_Gems.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Stocks_Gems.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.SCStocks_Jewelry.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.Stocks_Jewelry.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.S_Gems.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.S_Jewelry.resources
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.csproj.GenerateResource.Cache
+D:\PCJ\PROject\PCJ_System\obj\Debug\PCJ_System.csprojResolveAssemblyReference.cache
