@@ -15,8 +15,6 @@ namespace PCJ_System
 {
     public partial class In_certi : Form
     {
-        private static int _lastFC = 0;
-        private static int _lastLC = 0;
         private string[] last_amount = { "", "", "" };
         private List<Image> pics = new List<Image>();
         DataTable dt = new DataTable();
@@ -122,7 +120,6 @@ namespace PCJ_System
 
         private void In_certi_Load(object sender, EventArgs e)
         {
-            getLastNumbers();
         }
 
         private void checkBox_disable_CheckedChanged(object sender, EventArgs e)
@@ -297,9 +294,9 @@ namespace PCJ_System
         private void cmbInvTyp_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbInvTyp.SelectedIndex == 0)
-                txtInvNo.Text = string.Format("CMB-{0:000}-FC", _lastFC);
+                txtInvNo.Text = string.Format("CMB-{0:000}-FC", getNextNumber("FC"));
             else
-                txtInvNo.Text = string.Format("CMB-{0:000}-LC", _lastLC);
+                txtInvNo.Text = string.Format("CMB-{0:000}-LC", getNextNumber("LC"));
 
             if (cmbInvTyp.Text == "LOCAL")
             {
@@ -315,7 +312,10 @@ namespace PCJ_System
         {
             try
             {
-                String query = "INSERT INTO CustomerDetails (InvType,InvNo,CusNm,CusTitle,CusAddress,isAct) VALUES(@InvType,@InvNo,@CusNm,@CusTitle,@CusAddress,@isAct)";
+                //string query = "INSERT INTO dbo.Invoice (Invoice_No,";
+
+
+                String query = "INSERT INTO CustomerDe (InvType,InvNo,CusNm,CusTitle,CusAddress,isAct) VALUES(@InvType,@InvNo,@CusNm,@CusTitle,@CusAddress,@isAct)";
 
                 SqlCommand command = new SqlCommand(query, conn);
 
@@ -340,11 +340,6 @@ namespace PCJ_System
 
                 command.ExecuteNonQuery();
 
-                if (cmbInvTyp.SelectedIndex == 0)
-                    _lastFC++;
-                else
-                    _lastLC++;
-                saveLastNumbers();
 
                 MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -355,47 +350,23 @@ namespace PCJ_System
                 MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void getLastNumbers()
+
+        private int getNextNumber(string type)
         {
-            try
+            using (var command = new SqlCommand("SELECT TOP 1 Invoice_No FROM dbo.Invoice WHERE Invoice_Type=@type ORDER BY Invoice_No DESC", conn))
             {
-                String selectQuery = "SELECT * FROM LstInvId";
-                using (SqlDataAdapter execute = new SqlDataAdapter(selectQuery, conn))
+                command.Parameters.AddWithValue("@type", type);
+
+                using (var reader = command.ExecuteReader())
                 {
-                    using (SqlDataReader reader = execute.SelectCommand.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.HasRows && reader.Read())
-                        {
-                            _lastFC = reader.GetInt32(1);
-                            _lastLC = reader.GetInt32(2);
-                        }
-                        else
-                        {
-                            _lastFC = 1;
-                            _lastLC = 1;
-                        }
+                        return Int32.Parse(reader[0].ToString());
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
-        }
-        private void saveLastNumbers()
-        {
-            try
-            {
-                String updateQuery = string.Format("UPDATE LstInvId SET lastfc={0}, lastlc={1}", _lastFC, _lastLC);
-                SqlDataAdapter execute = new SqlDataAdapter(updateQuery, conn);
-                execute.SelectCommand.ExecuteNonQuery();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return 1;
         }
 
         private void btnFCupdate_Click(object sender, EventArgs e)
