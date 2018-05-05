@@ -17,6 +17,7 @@ namespace PCJ_System
     {
         private string[] last_amount = { "", "", "" };
         private List<Image> pics = new List<Image>();
+        private List<int> itemIDs = new List<int>();
         DataTable dt = new DataTable();
 
         SqlConnection conn;
@@ -249,6 +250,7 @@ namespace PCJ_System
                         byte[] pic = reader["Image"] as byte[];
                         MemoryStream ms = new MemoryStream(pic);
                         pics.Add(Image.FromStream(ms));
+                        itemIDs.Add(Int32.Parse(reader["ID"].ToString()));
 
                         ClearPurchase();
                         dt.Rows.Add(row);
@@ -312,37 +314,44 @@ namespace PCJ_System
         {
             try
             {
-                //string query = "INSERT INTO dbo.Invoice (Invoice_No,";
+                string invType = null;
+                if (cmbInvTyp.SelectedIndex == 0)
+                {
+                    invType = "FC";
+                } else if (cmbInvTyp.SelectedIndex == 1)
+                {
+                    invType = "LC";
+                }
 
+                int id = getNextNumber(invType);
 
-                String query = "INSERT INTO CustomerDe (InvType,InvNo,CusNm,CusTitle,CusAddress,isAct) VALUES(@InvType,@InvNo,@CusNm,@CusTitle,@CusAddress,@isAct)";
-
-                SqlCommand command = new SqlCommand(query, conn);
-
-                command.Parameters.Add("@InvType", SqlDbType.NVarChar);
-                command.Parameters["@InvType"].Value = cmbInvTyp.Text;
-
-                command.Parameters.Add("@InvNo", SqlDbType.VarChar);
-                command.Parameters["@InvNo"].Value = txtInvNo.Text;
-
-                command.Parameters.Add("@CusNm", SqlDbType.NVarChar);
-                command.Parameters["@CusNm"].Value = txtCusNm.Text;
-
-                command.Parameters.Add("@CusTitle", SqlDbType.NVarChar);
-                command.Parameters["@CusTitle"].Value = cmbTitle.Text;
-
-                command.Parameters.Add("@CusAddress", SqlDbType.NVarChar);
-                command.Parameters["@CusAddress"].Value = txtAddress.Text;
-
-                command.Parameters.Add("@isAct", SqlDbType.Bit);
-                command.Parameters["@isAct"].Value = txtAddress.Text;
-
-
+                SqlCommand command = new SqlCommand("INSERT INTO Invoice (Invoice_Num,Invoice_Date,Invoice_Type) VALUES (@id,@date,@type)", conn);
+                command.Parameters.AddWithValue("id", id);
+                command.Parameters.AddWithValue("date", DateTime.Now.ToString());
+                command.Parameters.AddWithValue("type", invType);
                 command.ExecuteNonQuery();
 
+                command = new SqlCommand("INSERT INTO Customer VALUES(@id,@name,@title,@address)", conn);
+                command.Parameters.AddWithValue("id", id);
+                command.Parameters.AddWithValue("name", txtCusNm.Text);
+                command.Parameters.AddWithValue("title", cmbTitle.SelectedItem.ToString());
+                command.Parameters.AddWithValue("address", txtAddress.Text);
+                command.ExecuteNonQuery();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    command = new SqlCommand("INSERT INTO Purchase VALUES(@inv,@lino,@item,@cost,@qty,@weight,@spec)", conn);
+                    command.Parameters.AddWithValue("inv", id);
+                    command.Parameters.AddWithValue("lino", dt.Rows[i][0]);
+                    command.Parameters.AddWithValue("item", itemIDs[i]);
+                    command.Parameters.AddWithValue("cost", dt.Rows[i][5]);
+                    command.Parameters.AddWithValue("qty", dt.Rows[i][3]);
+                    command.Parameters.AddWithValue("weight", dt.Rows[i][6]);
+                    command.Parameters.AddWithValue("spec", dt.Rows[i][7]);
+                    command.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
 
             catch (Exception ex)
@@ -493,6 +502,7 @@ namespace PCJ_System
             if (dgvItem.SelectedRows.Count > 0)
             {
                 pics.RemoveAt(dgvItem.CurrentRow.Index);
+                itemIDs.RemoveAt(dgvItem.CurrentRow.Index);
                 dgvItem.Rows.RemoveAt(dgvItem.CurrentRow.Index);
             }
         }
