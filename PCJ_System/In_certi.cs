@@ -148,7 +148,6 @@ namespace PCJ_System
         {
             if (cmbItmTyp.SelectedIndex == 0)
             {
-                textBox1.Text = "";
                 txtNoPieces.Visible = true;
                 lblNoPieces.Visible = true;
                 txtCost.Visible = true;
@@ -158,9 +157,8 @@ namespace PCJ_System
                 txtSpecification.Visible = true;
                 lblSpecification.Visible = true;
             }
-            else
+            else if (cmbItmTyp.SelectedIndex == 1)
             {
-                textBox1.Text = "";
                 txtNoPieces.Visible = false;
                 lblNoPieces.Visible = false;
                 txtCost.Visible = false;
@@ -169,8 +167,13 @@ namespace PCJ_System
                 lblGemWeight.Visible = false;
                 txtSpecification.Visible = false;
                 lblSpecification.Visible = false;
-              
             }
+            else
+            {
+                return;
+            }
+
+            textBox1.Text = "";
             textBox1.Enabled = true;
         }
 
@@ -198,9 +201,7 @@ namespace PCJ_System
                 {
                     if (reader.Read())
                     {
-                        byte[] pic = reader["Image"] as byte[];
-                        MemoryStream ms = new MemoryStream(pic);
-                        pics.Add(Image.FromStream(ms));
+
 
                         var row = dt.NewRow();
                         row[0] = dt.Rows.Count + 1;
@@ -213,7 +214,26 @@ namespace PCJ_System
                             row[3] = txtNoPieces.Text;
                             row[4] = String.Format("{0} {1}cts ", reader["Gem_Type"], txtGemWeight.Text);
                             row[5] = txtCost.Text;
-                            row[6] = txtSpecification.Text;
+                            row[6] = txtGemWeight.Text;
+                            row[7] = txtSpecification.Text;
+
+                            if (Int32.Parse(row[3].ToString()) > Int32.Parse(reader["No_of_pieces"].ToString()))
+                            {
+                                // Entered no of pieces is too high
+                                return;
+                            }
+
+                            if (Double.Parse(row[5].ToString()) > Double.Parse(reader["Cost"].ToString()))
+                            {
+                                // The entered cost is too high
+                                return;
+                            }
+
+                            if (Double.Parse(row[6].ToString()) > Double.Parse(reader["Weight"].ToString()))
+                            {
+                                // Weight entered is too high
+                                return;
+                            }
                         }
                         else if (cmbItmTyp.SelectedIndex == 1)
                         {
@@ -229,11 +249,36 @@ namespace PCJ_System
                             row[3] = reader["No_of_pieces"];
                         }
 
+                        byte[] pic = reader["Image"] as byte[];
+                        MemoryStream ms = new MemoryStream(pic);
+                        pics.Add(Image.FromStream(ms));
+
+                        ClearPurchase();
                         dt.Rows.Add(row);
                         dgvItem.RefreshEdit();
                     }
                 }
             }
+        }
+
+        private void ClearPurchase()
+        {
+            cmbItmTyp.SelectedIndex = -1;
+            textBox1.Text = "";
+            txtNoPieces.Visible = false;
+            lblNoPieces.Visible = false;
+            txtCost.Visible = false;
+            lblCost.Visible = false;
+            txtGemWeight.Visible = false;
+            lblGemWeight.Visible = false;
+            txtSpecification.Visible = false;
+            lblSpecification.Visible = false;
+
+            textBox1.Enabled = false;
+            txtSpecification.Text = "";
+            txtGemWeight.Text = "";
+            txtCost.Text = "";
+            txtNoPieces.Text = "";
         }
 
         private void cmbPaymentTyp_SelectedIndexChanged(object sender, EventArgs e)
