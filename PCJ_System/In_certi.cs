@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+using System.IO;
 
 namespace PCJ_System
 {
@@ -15,6 +17,11 @@ namespace PCJ_System
     {
         private static int _lastFC = 0;
         private static int _lastLC = 0;
+        private string[] last_amount = { "", "", "" };
+        private List<Image> pics = new List<Image>();
+        DataTable dt = new DataTable();
+
+        SqlConnection conn;
 
         public In_certi()
         {
@@ -33,24 +40,40 @@ namespace PCJ_System
             InitializeComponent();
             CalculateTotal();
 
-            rates = new List<int>();
-
-            using (var conn = new DB_CONNECTION().getConnection())
+            using (var cmd = new SqlCommand("SELECT * FROM dbo.[F_Currency]", conn))
             {
-                using (var cmd = new SqlCommand("SELECT * FROM dbo.[F_Currency]", conn))
+                using (var reader = cmd.ExecuteReader())
                 {
-                    using (var reader = cmd.ExecuteReader())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            cmbCurrency1.Items.Add(reader["FC_TYPE"].ToString());
-                            cmbCurrency2.Items.Add(reader["FC_TYPE"].ToString());
-                            cmbCurrency3.Items.Add(reader["FC_TYPE"].ToString());
-                            rates.Add(Int32.Parse(reader["FC_RATE"].ToString()));
-                        }
+                        cmbCurrency1.Items.Add(reader["FC_TYPE"].ToString());
+                        cmbCurrency2.Items.Add(reader["FC_TYPE"].ToString());
+                        cmbCurrency3.Items.Add(reader["FC_TYPE"].ToString());
                     }
                 }
             }
+
+            using (var cmd = new SqlCommand("SELECT * FROM dbo.[Card_Type]", conn))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cmbCardTyp.Items.Add(reader["CardType"].ToString());
+                    }
+                }
+            }
+
+            cmbPaymentTyp.SelectedIndex = 0;
+
+            for (int i = 0; i < dgvItem.Columns.Count; ++i)
+            {
+                dt.Columns.Add(dgvItem.Columns[i].HeaderText);
+            }
+
+            dgvItem.AutoGenerateColumns = true;
+            dgvItem.Columns.Clear();
+            dgvItem.DataSource = dt;
         }
         private void CalculateTotal()
         {
@@ -108,21 +131,16 @@ namespace PCJ_System
             {
                 cmbCurrency2.Enabled = true;
                 txtAmt2.Enabled = true;
-                txtRate2.Enabled = true;
                 cmbCurrency3.Enabled = true;
                 txtAmt3.Enabled = true;
-                txtRate3.Enabled = true;
 
             }
             if (checkBox_disable.Checked == false)
             {
                 cmbCurrency2.Enabled = false;
                 txtAmt2.Enabled = false;
-                txtRate2.Enabled = false;
                 cmbCurrency3.Enabled = false;
                 txtAmt3.Enabled = false;
-                txtRate3.Enabled = false;
-
             }
         }
 
@@ -176,53 +194,73 @@ namespace PCJ_System
 
         private void btnremovestock_Click(object sender, EventArgs e)
         {
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row[2].ToString() == textBox1.Text)
+                {
+                    return;
+                }
+            }
 
+
+            using (var command = new SqlCommand("SELECT * FROM Stock_Entry WHERE Stock_No=@id AND Stock_Type=@stock_type", conn))
+            {
+                command.Parameters.AddWithValue("id", textBox1.Text);
+                command.Parameters.AddWithValue("stock_type", cmbItmTyp.SelectedItem.ToString());
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        byte[] pic = reader["Image"] as byte[];
+                        MemoryStream ms = new MemoryStream(pic);
+                        pics.Add(Image.FromStream(ms));
+
+                        var row = dt.NewRow();
+                        row[0] = dt.Rows.Count + 1;
+                        row[1] = reader["Stock_Type"].ToString();
+                        row[2] = reader["Stock_No"];
+
+                        if (cmbItmTyp.SelectedIndex == 0)
+                        {
+                            // gem
+                            row[3] = txtNoPieces.Text;
+                            row[4] = String.Format("{0} {1}cts ", reader["Gem_Type"], txtGemWeight.Text);
+                            row[5] = txtCost.Text;
+                            row[6] = txtSpecification.Text;
+                        }
+                        else if (cmbItmTyp.SelectedIndex == 1)
+                        {
+                            // jewellery
+                            string desc = String.Format("{0} {1} with {2} {3} {4}cts", reader["Item_Description"], reader["Item_Type"], reader["No_of_Gems"], reader["Gem_Type"], reader["Weight"]);
+                            if (Int32.Parse(reader["No_of_other_Gems"].ToString()) != 0)
+                            {
+                                desc = String.Format("{0} & {1} {2} {3}cts", desc, reader["No_of_other_Gems"], reader["Other_Gems"], reader["weight_of_other_gems"]);
+                            }
+
+                            row[4] = desc;
+                            row[5] = reader["Cost"];
+                            row[3] = reader["No_of_pieces"];
+                        }
+
+                        dt.Rows.Add(row);
+                        dgvItem.RefreshEdit();
+                    }
+                }
+            }
         }
 
         private void cmbPaymentTyp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbPaymentTyp.Text == null || cmbPaymentTyp.Text == "Cash")
+            if (cmbPaymentTyp.SelectedIndex > 0)
             {
-                //lblCardNo.Visible = true;
-                cmbCardTyp.Visible = false;
-                lblCardTyp.Visible = false;
-                txtcardamt.Visible = false;
-                lblcardamt.Visible = false;
-
-                cmbCurrency1.Enabled = true;
-                txtAmt1.Enabled = true;
-                txtRate1.Enabled = true;
-
+                lblCardTyp.Visible = lblcardamt.Visible = cmbCardTyp.Visible = txtcardamt.Visible = true;
             }
-            else if (cmbPaymentTyp.Text == "Card")
-
+            else if (cmbPaymentTyp.SelectedIndex == 0)
             {
-                cmbCardTyp.Visible = true;
-                lblCardTyp.Visible = true;
-                txtcardamt.Visible = true;
-                lblcardamt.Visible = true;
-
-                cmbCurrency1.Enabled = false;
-                txtAmt1.Enabled = false;
-                txtRate1.Enabled = false;
-
-
+                lblCardTyp.Visible = lblcardamt.Visible = cmbCardTyp.Visible = txtcardamt.Visible = false;
+                txtcardamt.Text = "";
             }
-            else
-            {
-                cmbCardTyp.Visible = true;
-                lblCardTyp.Visible = true;
-                txtcardamt.Visible = true;
-                lblcardamt.Visible = true;
-
-                cmbCurrency1.Enabled = true;
-                txtAmt1.Enabled = true;
-                txtRate1.Enabled = true;
-
-
-            }
-
-
         }
 
         private void cmbInvTyp_SelectedIndexChanged(object sender, EventArgs e)
@@ -246,8 +284,6 @@ namespace PCJ_System
         {
             try
             {
-                conn.Close();
-                conn.Open();
                 String query = "INSERT INTO CustomerDetails (InvType,InvNo,CusNm,CusTitle,CusAddress,isAct) VALUES(@InvType,@InvNo,@CusNm,@CusTitle,@CusAddress,@isAct)";
 
                 SqlCommand command = new SqlCommand(query, conn);
@@ -272,7 +308,6 @@ namespace PCJ_System
 
 
                 command.ExecuteNonQuery();
-                conn.Close();
 
                 if (cmbInvTyp.SelectedIndex == 0)
                     _lastFC++;
@@ -293,22 +328,23 @@ namespace PCJ_System
         {
             try
             {
-                conn.Close();
-                conn.Open();
                 String selectQuery = "SELECT * FROM LstInvId";
-                SqlDataAdapter execute = new SqlDataAdapter(selectQuery, conn);
-                SqlDataReader reader = execute.SelectCommand.ExecuteReader();
-                if (reader.HasRows && reader.Read())
+                using (SqlDataAdapter execute = new SqlDataAdapter(selectQuery, conn))
                 {
-                    _lastFC = reader.GetInt32(1);
-                    _lastLC = reader.GetInt32(2);
+                    using (SqlDataReader reader = execute.SelectCommand.ExecuteReader())
+                    {
+                        if (reader.HasRows && reader.Read())
+                        {
+                            _lastFC = reader.GetInt32(1);
+                            _lastLC = reader.GetInt32(2);
+                        }
+                        else
+                        {
+                            _lastFC = 1;
+                            _lastLC = 1;
+                        }
+                    }
                 }
-                else
-                {
-                    _lastFC = 1;
-                    _lastLC = 1;
-                }
-                conn.Close();
             }
             catch (Exception ex)
             {
@@ -320,12 +356,9 @@ namespace PCJ_System
         {
             try
             {
-                conn.Close();
-                conn.Open();
                 String updateQuery = string.Format("UPDATE LstInvId SET lastfc={0}, lastlc={1}", _lastFC, _lastLC);
                 SqlDataAdapter execute = new SqlDataAdapter(updateQuery, conn);
                 execute.SelectCommand.ExecuteNonQuery();
-                conn.Close();
             }
 
             catch (Exception ex)
@@ -343,40 +376,141 @@ namespace PCJ_System
 
         private void cmbCurrency1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DB_CONNECTION x = new DB_CONNECTION();
-            using (SqlConnection conn = x.getConnection())
+            TextBox txt;
+            if (sender == cmbCurrency1)
             {
-                TextBox txt;
-                if (sender == cmbCurrency1)
-                {
-                    txt = txtRate1;
-                }
-                else if (cmbCurrency2 == sender)
-                {
-                    txt = txtRate2;
-                }
-                else
-                {
-                    txt = txtRate3;
-                }
-
-                using (var cmd = new SqlCommand("SELECT [FC_Rate] FROM dbo.[F_Currency] WHERE [FC_TYPE]=@fc_type", conn))
-                {
-                    cmd.Parameters.AddWithValue("fc_type", ((ComboBox)sender).SelectedItem.ToString());
-                    txt.Text = cmd.ExecuteScalar().ToString();
-                }
+                txt = txtRate1;
+            }
+            else if (cmbCurrency2 == sender)
+            {
+                txt = txtRate2;
+            }
+            else
+            {
+                txt = txtRate3;
             }
 
-            //string GetData = "Select [FC_Rate] from F_Currency where FC_TYPE ='" + cmbCurrency1.Text + "' ";
-            //cmd = new SqlCommand(GetData, conn);
-            //var returnValue = cmd.ExecuteScalar();
-            //txtRate1.Text = returnValue.ToString();
-            //conn.Close();
+            using (var cmd = new SqlCommand("SELECT [FC_Rate] FROM dbo.[F_Currency] WHERE [FC_TYPE]=@fc_type", conn))
+            {
+                cmd.Parameters.AddWithValue("fc_type", ((ComboBox)sender).SelectedItem.ToString());
+                txt.Text = cmd.ExecuteScalar().ToString();
+            }
+
+            CalculateTotal();
         }
 
         private void btnaddstock_Click(object sender, EventArgs e)
         {
+            //    const string query = "SELECT TOP 1 Stock_No,Image"
 
+            using (var command = new SqlCommand("SELECT TOP 1 No_of_pieces,Stock_No,Image FROM Stock_Entry WHERE Stock_No=@id AND stock_type=@type", conn))
+            {
+                command.Parameters.AddWithValue("@id", textBox1.Text);
+                command.Parameters.AddWithValue("@type", cmbItmTyp.SelectedItem.ToString());
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        int qty = Int32.Parse(reader["No_of_pieces"].ToString());
+                        if (qty <= 0)
+                        {
+
+                            MessageBox.Show("Out of Stock!");
+                        }
+                        else
+                        {
+                            //pictureBox1.
+                            byte[] pic = reader["Image"] as byte[];
+                            if (pic != null)
+                            {
+                                MemoryStream stream = new MemoryStream(pic);
+                                pictureBox1.Image = Image.FromStream(stream);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void cmbCardTyp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAmt1_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtBox = (TextBox)sender;
+            TextBox rate = null;
+            TextBox total = null;
+            int index = 0;
+
+            if (sender == txtAmt1)
+            {
+                rate = txtRate1;
+                total = txtTot1;
+            }
+            else if (sender == txtAmt2)
+            {
+                rate = txtRate2;
+                total = txtTot2;
+                index = 1;
+            }
+            else if (sender == txtAmt3)
+            {
+                rate = txtRate3;
+                total = txtTot3;
+                index = 2;
+            }
+
+            if (!Regex.IsMatch(txtBox.Text, "^[0-9]+\\.?[0-9]?[0-9]?$"))
+            {
+                // txtTot1.Text = "";
+                if (txtBox.Text != "")
+                {
+                    txtBox.Text = last_amount[index];
+                }
+            }
+
+            if (txtBox.Text != "" && rate.Text != "")
+            {
+                total.Text = "" + (Double.Parse(txtBox.Text) * Double.Parse(rate.Text));
+            }
+
+            last_amount[index] = txtBox.Text;
+
+            CalculateTotal();
+        }
+
+        private void txtAmt1_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void dgvItem_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgvItem.SelectedRows.Count > 0)
+            {
+                pics.RemoveAt(dgvItem.CurrentRow.Index);
+                dgvItem.Rows.RemoveAt(dgvItem.CurrentRow.Index);
+            }
+        }
+
+        private void dgvItem_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (e.StateChanged == DataGridViewElementStates.Selected)
+            {
+
+            }
+
+            //if (e.StateChanged == DataGridViewElementStates.)
+        }
+
+        private void dgvItem_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvItem.CurrentRow.Index != -1)
+            {
+                pictureBox1.Image = pics[dgvItem.CurrentRow.Index];
+            }
         }
     }
 }

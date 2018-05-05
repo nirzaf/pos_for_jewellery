@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(In_certi));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,8 +60,6 @@
             this.cmbCurrency2 = new System.Windows.Forms.ComboBox();
             this.btnPrntInvoice = new System.Windows.Forms.Button();
             this.cmbCardTyp = new System.Windows.Forms.ComboBox();
-            this.cmbPaymentTyp = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCurrency1 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -68,6 +69,8 @@
             this.btnPrntCertificate = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.lblCardTyp = new System.Windows.Forms.Label();
+            this.cmbPaymentTyp = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtInvNo = new System.Windows.Forms.TextBox();
             this.cmbInvTyp = new System.Windows.Forms.ComboBox();
@@ -98,15 +101,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCost = new System.Windows.Forms.TextBox();
             this.dgvItem = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbItmTyp = new System.Windows.Forms.ComboBox();
             this.lblGemWeight = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -117,6 +111,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -218,7 +220,6 @@
             this.lblcardamt.Size = new System.Drawing.Size(90, 22);
             this.lblcardamt.TabIndex = 232;
             this.lblcardamt.Text = "Amount  :";
-            this.lblcardamt.Visible = false;
             // 
             // txtcardamt
             // 
@@ -227,7 +228,6 @@
             this.txtcardamt.Name = "txtcardamt";
             this.txtcardamt.Size = new System.Drawing.Size(139, 26);
             this.txtcardamt.TabIndex = 231;
-            this.txtcardamt.Visible = false;
             // 
             // label26
             // 
@@ -248,6 +248,7 @@
             this.txtAmt3.Name = "txtAmt3";
             this.txtAmt3.Size = new System.Drawing.Size(140, 26);
             this.txtAmt3.TabIndex = 229;
+            this.txtAmt3.TextChanged += new System.EventHandler(this.txtAmt1_TextChanged);
             // 
             // label25
             // 
@@ -268,6 +269,7 @@
             this.txtAmt2.Name = "txtAmt2";
             this.txtAmt2.Size = new System.Drawing.Size(140, 26);
             this.txtAmt2.TabIndex = 227;
+            this.txtAmt2.TextChanged += new System.EventHandler(this.txtAmt1_TextChanged);
             // 
             // label9
             // 
@@ -287,6 +289,8 @@
             this.txtAmt1.Name = "txtAmt1";
             this.txtAmt1.Size = new System.Drawing.Size(140, 26);
             this.txtAmt1.TabIndex = 225;
+            this.txtAmt1.TextChanged += new System.EventHandler(this.txtAmt1_TextChanged);
+            this.txtAmt1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAmt1_KeyDown);
             // 
             // label23
             // 
@@ -340,6 +344,7 @@
             // 
             // txtRate1
             // 
+            this.txtRate1.Enabled = false;
             this.txtRate1.Location = new System.Drawing.Point(745, 95);
             this.txtRate1.Name = "txtRate1";
             this.txtRate1.Size = new System.Drawing.Size(138, 26);
@@ -408,42 +413,10 @@
             // 
             this.cmbCardTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCardTyp.FormattingEnabled = true;
-            this.cmbCardTyp.Items.AddRange(new object[] {
-            "VISA ",
-            "UNION PAY",
-            "MASTER",
-            "AMEX"});
             this.cmbCardTyp.Location = new System.Drawing.Point(476, 37);
             this.cmbCardTyp.Name = "cmbCardTyp";
             this.cmbCardTyp.Size = new System.Drawing.Size(140, 28);
             this.cmbCardTyp.TabIndex = 215;
-            this.cmbCardTyp.Visible = false;
-            // 
-            // cmbPaymentTyp
-            // 
-            this.cmbPaymentTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPaymentTyp.FormattingEnabled = true;
-            this.cmbPaymentTyp.Items.AddRange(new object[] {
-            "Cash",
-            "Card",
-            "Both  "});
-            this.cmbPaymentTyp.Location = new System.Drawing.Point(190, 34);
-            this.cmbPaymentTyp.Name = "cmbPaymentTyp";
-            this.cmbPaymentTyp.Size = new System.Drawing.Size(130, 28);
-            this.cmbPaymentTyp.TabIndex = 214;
-            this.cmbPaymentTyp.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentTyp_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 14F);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(34, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 22);
-            this.label6.TabIndex = 213;
-            this.label6.Text = "Payment Mode  :";
             // 
             // label5
             // 
@@ -586,12 +559,37 @@
             this.lblCardTyp.BackColor = System.Drawing.Color.Transparent;
             this.lblCardTyp.Font = new System.Drawing.Font("Arial", 14F);
             this.lblCardTyp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCardTyp.Location = new System.Drawing.Point(352, 40);
+            this.lblCardTyp.Location = new System.Drawing.Point(344, 38);
             this.lblCardTyp.Name = "lblCardTyp";
-            this.lblCardTyp.Size = new System.Drawing.Size(118, 22);
+            this.lblCardTyp.Size = new System.Drawing.Size(127, 22);
             this.lblCardTyp.TabIndex = 52;
-            this.lblCardTyp.Text = "Card Type   :";
-            this.lblCardTyp.Visible = false;
+            this.lblCardTyp.Text = "Card Vendor :";
+            // 
+            // cmbPaymentTyp
+            // 
+            this.cmbPaymentTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPaymentTyp.FormattingEnabled = true;
+            this.cmbPaymentTyp.Items.AddRange(new object[] {
+            "None",
+            "Credit",
+            "Debit"});
+            this.cmbPaymentTyp.Location = new System.Drawing.Point(190, 34);
+            this.cmbPaymentTyp.Name = "cmbPaymentTyp";
+            this.cmbPaymentTyp.Size = new System.Drawing.Size(130, 28);
+            this.cmbPaymentTyp.TabIndex = 214;
+            this.cmbPaymentTyp.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentTyp_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial", 14F);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(76, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 22);
+            this.label6.TabIndex = 213;
+            this.label6.Text = "Card Type :";
             // 
             // label13
             // 
@@ -955,8 +953,6 @@
             // 
             this.dgvItem.AllowUserToAddRows = false;
             this.dgvItem.AllowUserToDeleteRows = false;
-            this.dgvItem.AllowUserToResizeColumns = false;
-            this.dgvItem.AllowUserToResizeRows = false;
             this.dgvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -966,58 +962,19 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7,
             this.Column8,
             this.Column9});
             this.dgvItem.Location = new System.Drawing.Point(16, 144);
             this.dgvItem.Name = "dgvItem";
+            this.dgvItem.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgvItem.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dgvItem.RowTemplate.ReadOnly = true;
+            this.dgvItem.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvItem.Size = new System.Drawing.Size(1243, 149);
             this.dgvItem.TabIndex = 143;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "LiNo";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Stock_Type";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Stock_No";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Qty";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Item_Name";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Cost";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "GemPcs";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "GemWgt";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Spec";
-            this.Column9.Name = "Column9";
+            this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
+            this.dgvItem.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvItem_RowHeaderMouseDoubleClick);
+            this.dgvItem.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvItem_RowStateChanged);
             // 
             // cmbItmTyp
             // 
@@ -1025,8 +982,8 @@
             this.cmbItmTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbItmTyp.FormattingEnabled = true;
             this.cmbItmTyp.Items.AddRange(new object[] {
-            "GEM",
-            "JEWELERY"});
+            "Gems",
+            "Jewellery"});
             this.cmbItmTyp.Location = new System.Drawing.Point(201, 34);
             this.cmbItmTyp.Name = "cmbItmTyp";
             this.cmbItmTyp.Size = new System.Drawing.Size(127, 28);
@@ -1147,6 +1104,55 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // Column1
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.HeaderText = "No";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.HeaderText = "Stock_Type";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.HeaderText = "Stock_No";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Qty";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Item_Name";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Cost";
+            this.Column6.Name = "Column6";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Weight";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Spec";
+            this.Column9.Name = "Column9";
+            // 
             // In_certi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1223,8 +1229,6 @@
         private System.Windows.Forms.ComboBox cmbCurrency2;
         private System.Windows.Forms.Button btnPrntInvoice;
         private System.Windows.Forms.ComboBox cmbCardTyp;
-        private System.Windows.Forms.ComboBox cmbPaymentTyp;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCurrency1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1265,15 +1269,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.Button btnFCupdate;
@@ -1283,5 +1278,15 @@
         private System.Windows.Forms.Button Print_certificate_Pre;
         private System.Windows.Forms.Button Print_invoice_Pre;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbPaymentTyp;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }
