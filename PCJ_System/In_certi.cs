@@ -157,10 +157,7 @@ namespace PCJ_System
                 lblGemWeight.Visible = true;
                 txtSpecification.Visible = true;
                 lblSpecification.Visible = true;
-                tickspec.Visible = true;
-
             }
-
             else
             {
                 textBox1.Text = "";
@@ -172,8 +169,9 @@ namespace PCJ_System
                 lblGemWeight.Visible = false;
                 txtSpecification.Visible = false;
                 lblSpecification.Visible = false;
-                tickspec.Visible = false;
+              
             }
+            textBox1.Enabled = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
