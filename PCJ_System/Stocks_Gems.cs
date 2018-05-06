@@ -16,7 +16,7 @@ namespace PCJ_System
     {
         SqlConnection conn;
         SqlDataAdapter adapt;
-        private const string select_query = "SELECT TOP 10 * FROM Stock_Entry WHERE Stock_Type = 'Gems' ORDER BY ID DESC";
+        private const string select_query = "SELECT TOP 10 * FROM Stock_Entry WHERE Stock_Type = 'Gems' ORDER BY Stock_ID DESC";
         // DataTable dataset;
 
         private static Stocks_Gems _instance;
@@ -26,15 +26,18 @@ namespace PCJ_System
             DataTable dt = new DataTable();
             adapt = new SqlDataAdapter(select_query, conn);
             adapt.Fill(dt);
+
             dataGridView1.DataSource = dt;
             conn.Close();
 
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
+
                 if (dataGridView1.Columns[i] is DataGridViewImageColumn)
                 {
                     ((DataGridViewImageColumn)dataGridView1.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Stretch;
                     break;
                 }
+
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 row.Height = 80;

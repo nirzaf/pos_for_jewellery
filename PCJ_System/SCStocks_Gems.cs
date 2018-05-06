@@ -16,7 +16,7 @@ namespace PCJ_System
     {
         SqlConnection conn;
         SqlDataAdapter adapt;
-        private const string select_query = "SELECT TOP 10 * FROM Stock_Entry WHERE Stock_Type = 'Gems' ORDER BY ID DESC";
+        private const string select_query = "SELECT TOP 10 * FROM Stock_Entry WHERE Stock_Type = 'Gems' ORDER BY Stock_ID DESC";
         // DataTable dataset;
 
         private static SCStocks_Gems _instance;

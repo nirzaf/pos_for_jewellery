@@ -19,6 +19,7 @@ namespace PCJ_System
         private int nextNumber;
         private List<Image> pics = new List<Image>();
         private List<int> itemIDs = new List<int>();
+        private List<String> itemNos = new List<String>();
         DataTable dt = new DataTable();
 
         SqlConnection conn;
@@ -57,13 +58,13 @@ namespace PCJ_System
             cmbCurrency2.SelectedIndex = 1;
             cmbCurrency3.SelectedIndex = 2;
 
-            using (var cmd = new SqlCommand("SELECT * FROM dbo.[Card_Type]", conn))
+            using (var cmd = new SqlCommand("SELECT * FROM dbo.[Card_Vendor]", conn))
             {
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        cmbCardTyp.Items.Add(reader["CardType"].ToString());
+                        cmbCardTyp.Items.Add(reader["Vendor"].ToString());
                     }
                 }
             }
@@ -228,10 +229,17 @@ namespace PCJ_System
                     }
             }
 
-            using (var command = new SqlCommand("SELECT * FROM Stock_Entry WHERE Stock_No=@id AND Stock_Type=@stock_type", conn))
+            Match m = Regex.Match(textBox1.Text, "([a-zA-Z]+)([0-9]+)");
+            if (m.Groups.Count != 2)
             {
-                command.Parameters.AddWithValue("id", textBox1.Text);
-                command.Parameters.AddWithValue("stock_type", cmbItmTyp.SelectedItem.ToString());
+                // do nothing
+                return;
+            }
+
+            using (var command = new SqlCommand("SELECT * FROM AvailableItems WHERE StockNo=@StockNo AND StockID=@StockID", conn))
+            {
+                command.Parameters.AddWithValue("StockID", m.Groups[0].Value.ToString());
+                command.Parameters.AddWithValue("StockNo", m.Groups[1].Value.ToString());
 
                 using (var reader = command.ExecuteReader())
                 {
@@ -239,14 +247,14 @@ namespace PCJ_System
                     {
                         var row = dt.NewRow();
                         row[0] = dt.Rows.Count + 1;
-                        row[1] = reader["Stock_Type"].ToString();
-                        row[2] = reader["Stock_No"];
+                        row[1] = reader["StockType"].ToString();
+                        row[2] = String.Format("{0}{1:D4}", reader["StockNo"].ToString(), Int32.Parse(reader["StockID"].ToString()));
 
                         if (cmbItmTyp.SelectedIndex == 0)
                         {
                             // gem
                             row[3] = txtNoPieces.Text;
-                            row[4] = String.Format("{0} {1}cts ", reader["Gem_Type"], txtGemWeight.Text);
+                            row[4] = String.Format("{0} {1}cts ", reader["GemType"], txtGemWeight.Text);
                             row[5] = txtCost.Text;
                             row[6] = txtGemWeight.Text;
                             row[7] = txtSpecification.Text;
@@ -254,7 +262,7 @@ namespace PCJ_System
                             // MessageBox.Show(reader["No_of_pieces"].ToString());
                             bool noerrors = true;
 
-                            if (Int32.Parse(row[3].ToString()) > Int32.Parse(reader["No_of_pieces"].ToString()))
+                            if (Int32.Parse(row[3].ToString()) > Int32.Parse(reader["Quantity"].ToString()))
                             {
                                 errorProvider1.SetError(txtNoPieces, "Entered no of pieces is too high!");
                                 noerrors = false;
@@ -280,21 +288,22 @@ namespace PCJ_System
                         else if (cmbItmTyp.SelectedIndex == 1)
                         {
                             // jewellery
-                            string desc = String.Format("{0} {1} with {2} {3} {4}cts", reader["Item_Description"], reader["Item_Type"], reader["No_of_Gems"], reader["Gem_Type"], reader["Weight"]);
-                            if (Int32.Parse(reader["No_of_other_Gems"].ToString()) != 0)
+                            string desc = String.Format("{0} {1} with {2} {3} {4}cts", reader["Description"], reader["ItemType"], reader["NoOfGems"], reader["GemType"], reader["Weight"]);
+                            if (Int32.Parse(reader["NoOfOtherGems"].ToString()) != 0)
                             {
-                                desc = String.Format("{0} & {1} {2} {3}cts", desc, reader["No_of_other_Gems"], reader["Other_Gems"], reader["weight_of_other_gems"]);
+                                desc = String.Format("{0} & {1} {2} {3}cts", desc, reader["NoOfOtherGems"], reader["OtherGemType"], reader["WeightOfOtherGems"]);
                             }
 
                             row[4] = desc;
                             row[5] = reader["Cost"];
-                            row[3] = reader["No_of_pieces"];
+                            row[3] = reader["Quantity"];
                         }
 
                         byte[] pic = reader["Image"] as byte[];
                         MemoryStream ms = new MemoryStream(pic);
                         pics.Add(Image.FromStream(ms));
-                        itemIDs.Add(Int32.Parse(reader["ID"].ToString()));
+                        itemIDs.Add(Int32.Parse(reader["StockID"].ToString()));
+                        itemNos.Add(reader["StockNo"].ToString());
 
                         ClearPurchase();
                         dt.Rows.Add(row);
@@ -425,8 +434,9 @@ namespace PCJ_System
                     command.Parameters.AddWithValue("type", invType);
                     command.ExecuteNonQuery();
 
-                    command = new SqlCommand("INSERT INTO Customer VALUES(@id,@name,@title,@address)", conn, transaction);
+                    command = new SqlCommand("INSERT INTO Customer VALUES(@id,@type,@name,@title,@address)", conn, transaction);
                     command.Parameters.AddWithValue("id", id);
+                    command.Parameters.AddWithValue("type", invType);
                     command.Parameters.AddWithValue("name", txtCusNm.Text);
                     command.Parameters.AddWithValue("title", cmbTitle.SelectedItem.ToString());
                     command.Parameters.AddWithValue("address", txtAddress.Text);
@@ -438,10 +448,12 @@ namespace PCJ_System
                         float weight = (float)(dt.Rows[i][6].ToString() != "" ? Convert.ToDouble(dt.Rows[i][6].ToString()) : 0);
                         float cost = (float)(dt.Rows[i][5].ToString() != "" ? Convert.ToDouble(dt.Rows[i][5].ToString()) : 0);
 
-                        command = new SqlCommand("INSERT INTO Purchase VALUES(@inv,@lino,@item,@cost,@qty,@weight,@spec)", conn, transaction);
+                        command = new SqlCommand("INSERT INTO Purchase VALUES(@inv,@type,@lino,@ItemID,@ItemNo,@cost,@qty,@weight,@spec)", conn, transaction);
                         command.Parameters.AddWithValue("inv", id);
+                        command.Parameters.AddWithValue("type", invType);
                         command.Parameters.AddWithValue("lino", dt.Rows[i][0]);
-                        command.Parameters.AddWithValue("item", itemIDs[i]);
+                        command.Parameters.AddWithValue("ItemID", itemIDs[i]);
+                        command.Parameters.AddWithValue("ItemNo", itemNos[i]);
                         command.Parameters.AddWithValue("cost", cost);
                         command.Parameters.AddWithValue("qty", qty);
                         command.Parameters.AddWithValue("weight", weight);
@@ -449,8 +461,9 @@ namespace PCJ_System
                         command.ExecuteNonQuery();
 
                         // update stock
-                        command = new SqlCommand("UPDATE Status_Of_Stocks SET Qty=Qty-@qty, Weight=Weight-@weight, cost=cost-@cost WHERE item=@item", conn, transaction);
-                        command.Parameters.AddWithValue("item", itemIDs[i]);
+                        command = new SqlCommand("UPDATE Status_Of_Stocks SET Qty=Qty-@qty, Weight=Weight-@weight, cost=cost-@cost WHERE StockId=@StockID AND StockNo=@StockNo", conn, transaction);
+                        command.Parameters.AddWithValue("StockID", itemIDs[i]);
+                        command.Parameters.AddWithValue("StockNo", itemNos[i]);
                         command.Parameters.AddWithValue("cost", cost);
                         command.Parameters.AddWithValue("qty", qty);
                         command.Parameters.AddWithValue("weight", weight);
@@ -458,8 +471,9 @@ namespace PCJ_System
 
                     if (cmbPaymentTyp.SelectedIndex > 0 && cmbCardTyp.SelectedIndex != -1 && cmbCardTyp.Text.Length != 0)
                     {
-                        command = new SqlCommand("INSERT INTO Card_Payment VALUES(@inv,@amount,@vendor,@type)", conn, transaction);
+                        command = new SqlCommand("INSERT INTO Card_Payment VALUES(@inv,@type,@amount,@vendor,@type)", conn, transaction);
                         command.Parameters.AddWithValue("inv", id);
+                        command.Parameters.AddWithValue("type", invType);
                         command.Parameters.AddWithValue("amount", txtcardamt.Text);
                         command.Parameters.AddWithValue("vendor", cmbCardTyp.SelectedItem.ToString());
                         command.Parameters.AddWithValue("type", cmbPaymentTyp.SelectedItem.ToString());
@@ -469,18 +483,20 @@ namespace PCJ_System
                     if (txtAmt1.Text != "") 
                     {
                         var cashPayments = new[] {
-                            new { CurrencyType = cmbCurrency1.SelectedItem.ToString(), Amount = txtAmt1.Text, Rate = txtRate1.Text, Use = true},
-                            new { CurrencyType = cmbCurrency2.SelectedItem.ToString(), Amount = txtAmt2.Text, Rate = txtRate2.Text, Use = checkBox_disable.Checked && txtAmt2.Text != ""},
-                            new { CurrencyType = cmbCurrency3.SelectedItem.ToString(), Amount = txtAmt3.Text, Rate = txtRate3.Text, Use = checkBox_disable.Checked && txtAmt3.Text != ""}
+                            new { CurrencyType = cmbCurrency1.SelectedItem.ToString(), Amount = txtAmt1.Text, Rate = txtRate1.Text, Use = true, Number = 1},
+                            new { CurrencyType = cmbCurrency2.SelectedItem.ToString(), Amount = txtAmt2.Text, Rate = txtRate2.Text, Use = checkBox_disable.Checked && txtAmt2.Text != "", Number = 2},
+                            new { CurrencyType = cmbCurrency3.SelectedItem.ToString(), Amount = txtAmt3.Text, Rate = txtRate3.Text, Use = checkBox_disable.Checked && txtAmt3.Text != "" && txtAmt2.Text != "", Number = 3}
                         };
 
                         foreach (var cashPayment in cashPayments)
                         {
                             if (cashPayment.Use)
                             {
-                                command = new SqlCommand("INSERT INTO Cash_Payment VALUES(@inv,@type,@rate,@amt)", conn, transaction);
+                                command = new SqlCommand("INSERT INTO Cash_Payment VALUES(@inv,@itype,@ctype,@cno,@rate,@amt)", conn, transaction);
                                 command.Parameters.AddWithValue("inv", id);
-                                command.Parameters.AddWithValue("type", cashPayment.CurrencyType);
+                                command.Parameters.AddWithValue("itype", invType);
+                                command.Parameters.AddWithValue("ctype", cashPayment.CurrencyType);
+                                command.Parameters.AddWithValue("cno", cashPayment.Number);
                                 command.Parameters.AddWithValue("rate", cashPayment.Rate);
                                 command.Parameters.AddWithValue("amt", cashPayment.Amount);
                                 command.ExecuteNonQuery();
@@ -491,6 +507,8 @@ namespace PCJ_System
 
                     transaction.Commit();
                     // disable item stuff
+                    groupBox2.Enabled = false;
+
                     // disable save button
                     MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -516,7 +534,7 @@ namespace PCJ_System
                 {
                     if (reader.Read())
                     {
-                        nextNumber = Int32.Parse(reader[0].ToString());
+                        nextNumber = Int32.Parse(reader[0].ToString()) + 1;
                         return;
                     }
                 }
@@ -560,17 +578,24 @@ namespace PCJ_System
         private void btnaddstock_Click(object sender, EventArgs e)
         {
             //    const string query = "SELECT TOP 1 Stock_No,Image"
-
-            using (var command = new SqlCommand("SELECT TOP 1 No_of_pieces,Stock_No,Image FROM Stock_Entry WHERE Stock_No=@id AND stock_type=@type", conn))
+            Match m = Regex.Match(textBox1.Text, "([a-zA-Z]+)([0-9]+)");
+            if (m.Groups.Count != 2)
             {
-                command.Parameters.AddWithValue("@id", textBox1.Text);
-                command.Parameters.AddWithValue("@type", cmbItmTyp.SelectedItem.ToString());
+                // do nothing
+                return;
+            }
+
+            using (var command = new SqlCommand("SELECT TOP 1 * FROM dbo.AvailableItems WHERE StockNo=@StockNo AND StockID=@StockID AND StcokType=@StockType", conn))
+            {
+                command.Parameters.AddWithValue("StockID", m.Groups[0].Value.ToString());
+                command.Parameters.AddWithValue("StockNo", m.Groups[1].Value.ToString());
+                command.Parameters.AddWithValue("StockType", cmbItmTyp.SelectedItem.ToString());
 
                 using (var reader = command.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        int qty = Int32.Parse(reader["No_of_pieces"].ToString());
+                        int qty = Int32.Parse(reader["Quantity"].ToString());
                         if (qty <= 0)
                         {
 

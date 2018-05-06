@@ -83,6 +83,8 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
@@ -240,6 +242,7 @@
             this.txt_other_gems.Name = "txt_other_gems";
             this.txt_other_gems.Size = new System.Drawing.Size(208, 23);
             this.txt_other_gems.TabIndex = 7;
+            this.txt_other_gems.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label8
             // 
@@ -268,7 +271,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 14F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(21, 158);
+            this.label7.Location = new System.Drawing.Point(23, 175);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 22);
             this.label7.TabIndex = 66;
@@ -292,7 +295,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(20, 81);
+            this.label3.Location = new System.Drawing.Point(21, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 22);
             this.label3.TabIndex = 63;
@@ -334,6 +337,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.pb1);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label6);
@@ -345,6 +350,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txt_qty);
             this.groupBox1.Controls.Add(this.txt_no_of_gems);
+            this.groupBox1.Controls.Add(this.combo_item_type);
             this.groupBox1.Controls.Add(this.combo_itemk_description);
             this.groupBox1.Controls.Add(this.txtstock_no);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,11 +372,13 @@
             "STAR SAPPHIRE",
             "STAR RUBY",
             "CAT\'S EYE",
-            "YELLOW SAPPHIRE"});
+            "YELLOW SAPPHIRE",
+            "DIAMOND"});
             this.txt_gem_type.Location = new System.Drawing.Point(823, 162);
             this.txt_gem_type.Name = "txt_gem_type";
             this.txt_gem_type.Size = new System.Drawing.Size(288, 23);
             this.txt_gem_type.TabIndex = 4;
+            this.txt_gem_type.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txt_qty
             // 
@@ -407,18 +415,21 @@
             "10KT WHITE GOLD",
             "18KT WHITE GOLD",
             "PLATINUM",
+            "SILVER",
             "14KT W/G + WHITE 14KT Y/G "});
             this.combo_itemk_description.Location = new System.Drawing.Point(823, 80);
             this.combo_itemk_description.Name = "combo_itemk_description";
             this.combo_itemk_description.Size = new System.Drawing.Size(288, 23);
             this.combo_itemk_description.TabIndex = 1;
+            this.combo_itemk_description.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txtstock_no
             // 
             this.txtstock_no.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtstock_no.Enabled = false;
             this.txtstock_no.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstock_no.Location = new System.Drawing.Point(156, 80);
+            this.txtstock_no.Location = new System.Drawing.Point(161, 133);
             this.txtstock_no.Name = "txtstock_no";
             this.txtstock_no.Size = new System.Drawing.Size(166, 25);
             this.txtstock_no.TabIndex = 0;
@@ -436,10 +447,11 @@
             "CUFFLING",
             "TIE PIN",
             "BROACH"});
-            this.combo_item_type.Location = new System.Drawing.Point(196, 299);
+            this.combo_item_type.Location = new System.Drawing.Point(161, 178);
             this.combo_item_type.Name = "combo_item_type";
-            this.combo_item_type.Size = new System.Drawing.Size(172, 23);
+            this.combo_item_type.Size = new System.Drawing.Size(166, 23);
             this.combo_item_type.TabIndex = 2;
+            this.combo_item_type.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txt_ID
             // 
@@ -519,7 +531,7 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 60D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(1001, 63);
+            this.btnupdate.Location = new System.Drawing.Point(866, 63);
             this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.DarkCyan;
@@ -872,6 +884,30 @@
             this.pictureBox14.TabIndex = 2;
             this.pictureBox14.TabStop = false;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(25, 43);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(130, 28);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Main Stock";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(25, 77);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(124, 28);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.Text = "Mini Stock";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
             // S_Jewelry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,7 +927,6 @@
             this.Controls.Add(this.txt_gem_weight);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.txt_no_of_other_gems);
-            this.Controls.Add(this.combo_item_type);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -992,5 +1027,7 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
