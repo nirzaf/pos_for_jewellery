@@ -53,6 +53,10 @@ namespace PCJ_System
                 }
             }
 
+            cmbCurrency1.SelectedIndex = 0;
+            cmbCurrency2.SelectedIndex = 1;
+            cmbCurrency3.SelectedIndex = 2;
+
             using (var cmd = new SqlCommand("SELECT * FROM dbo.[Card_Type]", conn))
             {
                 using (var reader = cmd.ExecuteReader())
@@ -74,6 +78,8 @@ namespace PCJ_System
             dgvItem.AutoGenerateColumns = true;
             dgvItem.Columns.Clear();
             dgvItem.DataSource = dt;
+
+
         }
         private void CalculateTotal()
         {
@@ -84,6 +90,7 @@ namespace PCJ_System
             double amt1 = 0;
             double amt2 = 0;
             double amt3 = 0;
+
             if (txtRate1.Text != "")
                 rate1 = Convert.ToDouble(txtRate1.Text);
 
@@ -96,10 +103,10 @@ namespace PCJ_System
             if (txtAmt1.Text != "")
                 amt1 = Convert.ToDouble(txtAmt1.Text);
 
-            if (txtAmt2.Text != "")
+            if (txtAmt2.Text != "" && checkBox_disable.Checked)
                 amt2 = Convert.ToDouble(txtAmt2.Text);
 
-            if (txtAmt3.Text != "")
+            if (txtAmt3.Text != "" && checkBox_disable.Checked)
                 amt3 = Convert.ToDouble(txtAmt3.Text);
 
             txtTot1.Text = Convert.ToString(amt1 * rate1);
@@ -141,6 +148,8 @@ namespace PCJ_System
                 cmbCurrency3.Enabled = false;
                 txtAmt3.Enabled = false;
             }
+
+            CalculateTotal();
         }
 
         private void ST_Type_SelectedIndexChanged(object sender, EventArgs e)
@@ -354,33 +363,41 @@ namespace PCJ_System
         private void button3_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
+
+            bool noerrors = true;
+
             if (txtInvNo.Text.Length <= 0)
             {
                 errorProvider1.SetError(txtInvNo, "Please select the invoice type!!");
-                return;
+                noerrors = false;
             }
 
             if (cmbTitle.Text.Length <= 0)
             {
                 errorProvider1.SetError(cmbTitle, "Select the Customer Title");
-                return;
+                noerrors = false;
             }
 
             if (txtCusNm.Text.Length <= 0)
             {
                 errorProvider1.SetError(txtCusNm, "Enter Customer Name");
-                return;
+                noerrors = false;
             }
 
             if (txtAddress.Text.Length <= 0)
             {
                 errorProvider1.SetError(txtAddress, "Enter the Customer Address");
-                return;
+                noerrors = false;
             }
 
             if (txtTotalAmount.Text.Length <= 0)
             {
                 errorProvider1.SetError(txtTotalAmount, "The Total Amount cannot be empty!!");
+                noerrors = false;
+            }
+
+            if (!noerrors)
+            {
                 return;
             }
 
@@ -417,18 +434,64 @@ namespace PCJ_System
 
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
+                        float qty = (float)(dt.Rows[i][3].ToString() != "" ? Convert.ToDouble(dt.Rows[i][3].ToString()) : 0);
+                        float weight = (float)(dt.Rows[i][6].ToString() != "" ? Convert.ToDouble(dt.Rows[i][6].ToString()) : 0);
+                        float cost = (float)(dt.Rows[i][5].ToString() != "" ? Convert.ToDouble(dt.Rows[i][5].ToString()) : 0);
+
                         command = new SqlCommand("INSERT INTO Purchase VALUES(@inv,@lino,@item,@cost,@qty,@weight,@spec)", conn, transaction);
                         command.Parameters.AddWithValue("inv", id);
                         command.Parameters.AddWithValue("lino", dt.Rows[i][0]);
                         command.Parameters.AddWithValue("item", itemIDs[i]);
-                        command.Parameters.AddWithValue("cost", dt.Rows[i][5]);
-                        command.Parameters.AddWithValue("qty", dt.Rows[i][3]);
-                        command.Parameters.AddWithValue("weight", dt.Rows[i][6]);
+                        command.Parameters.AddWithValue("cost", cost);
+                        command.Parameters.AddWithValue("qty", qty);
+                        command.Parameters.AddWithValue("weight", weight);
                         command.Parameters.AddWithValue("spec", dt.Rows[i][7]);
+                        command.ExecuteNonQuery();
+
+                        // update stock
+                        command = new SqlCommand("UPDATE Status_Of_Stocks SET Qty=Qty-@qty, Weight=Weight-@weight, cost=cost-@cost WHERE item=@item", conn, transaction);
+                        command.Parameters.AddWithValue("item", itemIDs[i]);
+                        command.Parameters.AddWithValue("cost", cost);
+                        command.Parameters.AddWithValue("qty", qty);
+                        command.Parameters.AddWithValue("weight", weight);
+                    }
+
+                    if (cmbPaymentTyp.SelectedIndex > 0 && cmbCardTyp.SelectedIndex != -1 && cmbCardTyp.Text.Length != 0)
+                    {
+                        command = new SqlCommand("INSERT INTO Card_Payment VALUES(@inv,@amount,@vendor,@type)", conn, transaction);
+                        command.Parameters.AddWithValue("inv", id);
+                        command.Parameters.AddWithValue("amount", txtcardamt.Text);
+                        command.Parameters.AddWithValue("vendor", cmbCardTyp.SelectedItem.ToString());
+                        command.Parameters.AddWithValue("type", cmbPaymentTyp.SelectedItem.ToString());
                         command.ExecuteNonQuery();
                     }
 
+                    if (txtAmt1.Text != "") 
+                    {
+                        var cashPayments = new[] {
+                            new { CurrencyType = cmbCurrency1.SelectedItem.ToString(), Amount = txtAmt1.Text, Rate = txtRate1.Text, Use = true},
+                            new { CurrencyType = cmbCurrency2.SelectedItem.ToString(), Amount = txtAmt2.Text, Rate = txtRate2.Text, Use = checkBox_disable.Checked && txtAmt2.Text != ""},
+                            new { CurrencyType = cmbCurrency3.SelectedItem.ToString(), Amount = txtAmt3.Text, Rate = txtRate3.Text, Use = checkBox_disable.Checked && txtAmt3.Text != ""}
+                        };
+
+                        foreach (var cashPayment in cashPayments)
+                        {
+                            if (cashPayment.Use)
+                            {
+                                command = new SqlCommand("INSERT INTO Cash_Payment VALUES(@inv,@type,@rate,@amt)", conn, transaction);
+                                command.Parameters.AddWithValue("inv", id);
+                                command.Parameters.AddWithValue("type", cashPayment.CurrencyType);
+                                command.Parameters.AddWithValue("rate", cashPayment.Rate);
+                                command.Parameters.AddWithValue("amt", cashPayment.Amount);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                    }
+
                     transaction.Commit();
+                    // disable item stuff
+                    // disable save button
                     MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
