@@ -16,6 +16,7 @@ namespace PCJ_System
     public partial class In_certi : Form
     {
         private string[] last_amount = { "", "", "" };
+        private int nextNumber;
         private List<Image> pics = new List<Image>();
         private List<int> itemIDs = new List<int>();
         DataTable dt = new DataTable();
@@ -154,6 +155,8 @@ namespace PCJ_System
                 lblGemWeight.Visible = true;
                 txtSpecification.Visible = true;
                 lblSpecification.Visible = true;
+                btnaddstock.Enabled = true;
+                btnremovestock.Enabled = true;
             }
             else if (cmbItmTyp.SelectedIndex == 1)
             {
@@ -165,9 +168,13 @@ namespace PCJ_System
                 lblGemWeight.Visible = false;
                 txtSpecification.Visible = false;
                 lblSpecification.Visible = false;
+                btnremovestock.Enabled = true;
+                btnaddstock.Enabled = true;
             }
             else
             {
+                btnremovestock.Enabled = false;
+                btnaddstock.Enabled = false;
                 return;
             }
 
@@ -181,14 +188,36 @@ namespace PCJ_System
 
         private void btnremovestock_Click(object sender, EventArgs e)
         {
-            foreach (DataRow row in dt.Rows)
+            errorProvider1.Clear();
+
+            if (cmbItmTyp.SelectedIndex == 0)
             {
-                if (row[2].ToString() == textBox1.Text)
+                TextBox[] textboxes = { txtNoPieces, txtGemWeight, txtCost };
+                bool isValid = true;
+
+                foreach (TextBox t in textboxes)
+                {
+                    if (t.Text.Length <= 0)
+                    {
+                        errorProvider1.SetError(t, "Cannot be Empty!!");
+                        isValid = false;
+                    }
+                }
+
+                if (!isValid)
                 {
                     return;
                 }
+
             }
 
+            for (int i = 0; i < dt.Rows.Count; ++i) {
+                    if (dt.Rows[i][2].ToString() == textBox1.Text)
+                    {
+                        dgvItem.Rows[i].Selected = true;
+                        return;
+                    }
+            }
 
             using (var command = new SqlCommand("SELECT * FROM Stock_Entry WHERE Stock_No=@id AND Stock_Type=@stock_type", conn))
             {
@@ -199,8 +228,6 @@ namespace PCJ_System
                 {
                     if (reader.Read())
                     {
-
-
                         var row = dt.NewRow();
                         row[0] = dt.Rows.Count + 1;
                         row[1] = reader["Stock_Type"].ToString();
@@ -215,21 +242,29 @@ namespace PCJ_System
                             row[6] = txtGemWeight.Text;
                             row[7] = txtSpecification.Text;
 
+                            // MessageBox.Show(reader["No_of_pieces"].ToString());
+                            bool noerrors = true;
+
                             if (Int32.Parse(row[3].ToString()) > Int32.Parse(reader["No_of_pieces"].ToString()))
                             {
-                                // Entered no of pieces is too high
-                                return;
+                                errorProvider1.SetError(txtNoPieces, "Entered no of pieces is too high!");
+                                noerrors = false;
                             }
 
                             if (Double.Parse(row[5].ToString()) > Double.Parse(reader["Cost"].ToString()))
                             {
-                                // The entered cost is too high
-                                return;
+                                errorProvider1.SetError(txtCost, "Enter cost is too high");
+                                noerrors = false;
                             }
 
                             if (Double.Parse(row[6].ToString()) > Double.Parse(reader["Weight"].ToString()))
                             {
-                                // Weight entered is too high
+                                MessageBox.Show(txtGemWeight, "Wight enter is too high");
+                                noerrors = false;
+                            }
+
+                            if (!noerrors)
+                            {
                                 return;
                             }
                         }
@@ -296,9 +331,15 @@ namespace PCJ_System
         private void cmbInvTyp_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbInvTyp.SelectedIndex == 0)
-                txtInvNo.Text = string.Format("CMB-{0:000}-FC", getNextNumber("FC"));
+            {
+                getNextNumber("FC");
+                txtInvNo.Text = string.Format("CMB-{0:000}-FC", nextNumber);
+            }
             else
-                txtInvNo.Text = string.Format("CMB-{0:000}-LC", getNextNumber("LC"));
+            {
+                getNextNumber("LC");
+                txtInvNo.Text = string.Format("CMB-{0:000}-LC", nextNumber);
+            }
 
             if (cmbInvTyp.Text == "LOCAL")
             {
@@ -312,55 +353,97 @@ namespace PCJ_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            errorProvider1.Clear();
+            if (txtInvNo.Text.Length <= 0)
             {
-                string invType = null;
-                if (cmbInvTyp.SelectedIndex == 0)
-                {
-                    invType = "FC";
-                } else if (cmbInvTyp.SelectedIndex == 1)
-                {
-                    invType = "LC";
-                }
-
-                int id = getNextNumber(invType);
-
-                SqlCommand command = new SqlCommand("INSERT INTO Invoice (Invoice_Num,Invoice_Date,Invoice_Type) VALUES (@id,@date,@type)", conn);
-                command.Parameters.AddWithValue("id", id);
-                command.Parameters.AddWithValue("date", DateTime.Now.ToString());
-                command.Parameters.AddWithValue("type", invType);
-                command.ExecuteNonQuery();
-
-                command = new SqlCommand("INSERT INTO Customer VALUES(@id,@name,@title,@address)", conn);
-                command.Parameters.AddWithValue("id", id);
-                command.Parameters.AddWithValue("name", txtCusNm.Text);
-                command.Parameters.AddWithValue("title", cmbTitle.SelectedItem.ToString());
-                command.Parameters.AddWithValue("address", txtAddress.Text);
-                command.ExecuteNonQuery();
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    command = new SqlCommand("INSERT INTO Purchase VALUES(@inv,@lino,@item,@cost,@qty,@weight,@spec)", conn);
-                    command.Parameters.AddWithValue("inv", id);
-                    command.Parameters.AddWithValue("lino", dt.Rows[i][0]);
-                    command.Parameters.AddWithValue("item", itemIDs[i]);
-                    command.Parameters.AddWithValue("cost", dt.Rows[i][5]);
-                    command.Parameters.AddWithValue("qty", dt.Rows[i][3]);
-                    command.Parameters.AddWithValue("weight", dt.Rows[i][6]);
-                    command.Parameters.AddWithValue("spec", dt.Rows[i][7]);
-                    command.ExecuteNonQuery();
-                }
-
-                MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                errorProvider1.SetError(txtInvNo, "Please select the invoice type!!");
+                return;
             }
 
+            if (cmbTitle.Text.Length <= 0)
+            {
+                errorProvider1.SetError(cmbTitle, "Select the Customer Title");
+                return;
+            }
+
+            if (txtCusNm.Text.Length <= 0)
+            {
+                errorProvider1.SetError(txtCusNm, "Enter Customer Name");
+                return;
+            }
+
+            if (txtAddress.Text.Length <= 0)
+            {
+                errorProvider1.SetError(txtAddress, "Enter the Customer Address");
+                return;
+            }
+
+            if (txtTotalAmount.Text.Length <= 0)
+            {
+                errorProvider1.SetError(txtTotalAmount, "The Total Amount cannot be empty!!");
+                return;
+            }
+
+            try
+            {
+                SqlTransaction transaction = conn.BeginTransaction();
+
+                try
+                {
+                    string invType = null;
+                    if (cmbInvTyp.SelectedIndex == 0)
+                    {
+                        invType = "FC";
+                    }
+                    else if (cmbInvTyp.SelectedIndex == 1)
+                    {
+                        invType = "LC";
+                    }
+
+                    int id = nextNumber;
+
+                    SqlCommand command = new SqlCommand("INSERT INTO Invoice (Invoice_No,Invoice_Date,Invoice_Type) VALUES (@id,@date,@type)", conn, transaction);
+                    command.Parameters.AddWithValue("id", id);
+                    command.Parameters.AddWithValue("date", DateTime.Now.ToString());
+                    command.Parameters.AddWithValue("type", invType);
+                    command.ExecuteNonQuery();
+
+                    command = new SqlCommand("INSERT INTO Customer VALUES(@id,@name,@title,@address)", conn, transaction);
+                    command.Parameters.AddWithValue("id", id);
+                    command.Parameters.AddWithValue("name", txtCusNm.Text);
+                    command.Parameters.AddWithValue("title", cmbTitle.SelectedItem.ToString());
+                    command.Parameters.AddWithValue("address", txtAddress.Text);
+                    command.ExecuteNonQuery();
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        command = new SqlCommand("INSERT INTO Purchase VALUES(@inv,@lino,@item,@cost,@qty,@weight,@spec)", conn, transaction);
+                        command.Parameters.AddWithValue("inv", id);
+                        command.Parameters.AddWithValue("lino", dt.Rows[i][0]);
+                        command.Parameters.AddWithValue("item", itemIDs[i]);
+                        command.Parameters.AddWithValue("cost", dt.Rows[i][5]);
+                        command.Parameters.AddWithValue("qty", dt.Rows[i][3]);
+                        command.Parameters.AddWithValue("weight", dt.Rows[i][6]);
+                        command.Parameters.AddWithValue("spec", dt.Rows[i][7]);
+                        command.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                    MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private int getNextNumber(string type)
+        private void getNextNumber(string type)
         {
             using (var command = new SqlCommand("SELECT TOP 1 Invoice_No FROM dbo.Invoice WHERE Invoice_Type=@type ORDER BY Invoice_No DESC", conn))
             {
@@ -370,12 +453,13 @@ namespace PCJ_System
                 {
                     if (reader.Read())
                     {
-                        return Int32.Parse(reader[0].ToString());
+                        nextNumber = Int32.Parse(reader[0].ToString());
+                        return;
                     }
                 }
             }
 
-            return 1;
+            nextNumber = 1;
         }
 
         private void btnFCupdate_Click(object sender, EventArgs e)
