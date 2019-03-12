@@ -35,25 +35,29 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(37, 31);
+            this.comboBox1.Location = new System.Drawing.Point(49, 38);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
+            this.comboBox1.Size = new System.Drawing.Size(207, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(37, 74);
+            this.textBox1.Location = new System.Drawing.Point(49, 91);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
+            this.textBox1.Size = new System.Drawing.Size(207, 22);
             this.textBox1.TabIndex = 1;
             // 
             // Updatebt
             // 
-            this.Updatebt.Location = new System.Drawing.Point(37, 112);
+            this.Updatebt.Location = new System.Drawing.Point(49, 138);
+            this.Updatebt.Margin = new System.Windows.Forms.Padding(4);
             this.Updatebt.Name = "Updatebt";
-            this.Updatebt.Size = new System.Drawing.Size(156, 52);
+            this.Updatebt.Size = new System.Drawing.Size(208, 64);
             this.Updatebt.TabIndex = 2;
             this.Updatebt.Text = "Update";
             this.Updatebt.UseVisualStyleBackColor = true;
@@ -61,15 +65,17 @@
             // 
             // Foriegn_Currency_Update
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(85)))), ((int)(((byte)(114)))));
-            this.ClientSize = new System.Drawing.Size(232, 180);
+            this.ClientSize = new System.Drawing.Size(289, 222);
             this.Controls.Add(this.Updatebt);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Foriegn_Currency_Update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Update_Currency";
             this.Load += new System.EventHandler(this.Foriegn_Currency_Update_Load);
             this.ResumeLayout(false);

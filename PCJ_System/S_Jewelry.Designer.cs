@@ -52,12 +52,14 @@
             this.label19 = new System.Windows.Forms.Label();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.txt_gem_type = new System.Windows.Forms.ComboBox();
             this.txt_qty = new System.Windows.Forms.TextBox();
             this.txt_no_of_gems = new System.Windows.Forms.TextBox();
+            this.combo_item_type = new System.Windows.Forms.ComboBox();
             this.combo_itemk_description = new System.Windows.Forms.ComboBox();
             this.txtstock_no = new System.Windows.Forms.TextBox();
-            this.combo_item_type = new System.Windows.Forms.ComboBox();
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.Stock_Type = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -83,8 +85,6 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
@@ -118,9 +118,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial", 14F);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(62, 76);
+            this.label12.Location = new System.Drawing.Point(83, 94);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(142, 22);
+            this.label12.Size = new System.Drawing.Size(182, 27);
             this.label12.TabIndex = 33;
             this.label12.Text = "Gem Weight    :";
             // 
@@ -130,9 +131,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial", 14F);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(65, 139);
+            this.label14.Location = new System.Drawing.Point(87, 171);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(139, 22);
+            this.label14.Size = new System.Drawing.Size(179, 27);
             this.label14.TabIndex = 37;
             this.label14.Text = "Other Gems    :";
             // 
@@ -142,9 +144,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial", 14F);
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Location = new System.Drawing.Point(504, 141);
+            this.label15.Location = new System.Drawing.Point(672, 174);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(222, 22);
+            this.label15.Size = new System.Drawing.Size(283, 27);
             this.label15.TabIndex = 39;
             this.label15.Text = "Weight of other Gems    :";
             // 
@@ -154,9 +157,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Arial", 14F);
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(973, 105);
+            this.label16.Location = new System.Drawing.Point(1297, 129);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 22);
+            this.label16.Size = new System.Drawing.Size(96, 27);
             this.label16.TabIndex = 41;
             this.label16.Text = "Cost    :";
             // 
@@ -166,9 +170,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Arial", 14F);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(504, 76);
+            this.label13.Location = new System.Drawing.Point(672, 94);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(181, 22);
+            this.label13.Size = new System.Drawing.Size(230, 27);
             this.label13.TabIndex = 35;
             this.label13.Text = "No of other Gems   :";
             // 
@@ -181,9 +186,11 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(43, 437);
+            this.groupBox2.Location = new System.Drawing.Point(57, 538);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1357, 219);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1809, 270);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Measurement";
@@ -191,42 +198,42 @@
             // txt_weight_of_other_gems
             // 
             this.txt_weight_of_other_gems.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_weight_of_other_gems.Location = new System.Drawing.Point(771, 577);
-            this.txt_weight_of_other_gems.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_weight_of_other_gems.Location = new System.Drawing.Point(1028, 710);
+            this.txt_weight_of_other_gems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_weight_of_other_gems.Name = "txt_weight_of_other_gems";
-            this.txt_weight_of_other_gems.Size = new System.Drawing.Size(170, 24);
+            this.txt_weight_of_other_gems.Size = new System.Drawing.Size(225, 29);
             this.txt_weight_of_other_gems.TabIndex = 8;
-            this.txt_weight_of_other_gems.Text = "0.0";
+            this.txt_weight_of_other_gems.TextChanged += new System.EventHandler(this.txt_weight_of_other_gems_TextChanged);
             // 
             // txt_cost
             // 
             this.txt_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_cost.Location = new System.Drawing.Point(1094, 540);
-            this.txt_cost.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_cost.Location = new System.Drawing.Point(1459, 665);
+            this.txt_cost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_cost.Name = "txt_cost";
-            this.txt_cost.Size = new System.Drawing.Size(193, 24);
+            this.txt_cost.Size = new System.Drawing.Size(256, 29);
             this.txt_cost.TabIndex = 9;
-            this.txt_cost.Text = "0.0";
+            this.txt_cost.TextChanged += new System.EventHandler(this.txt_cost_TextChanged);
             // 
             // txt_gem_weight
             // 
             this.txt_gem_weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_gem_weight.Location = new System.Drawing.Point(256, 513);
-            this.txt_gem_weight.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_gem_weight.Location = new System.Drawing.Point(341, 631);
+            this.txt_gem_weight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_gem_weight.Name = "txt_gem_weight";
-            this.txt_gem_weight.Size = new System.Drawing.Size(205, 24);
+            this.txt_gem_weight.Size = new System.Drawing.Size(272, 29);
             this.txt_gem_weight.TabIndex = 5;
-            this.txt_gem_weight.Text = "0.0";
+            this.txt_gem_weight.TextChanged += new System.EventHandler(this.txt_gem_weight_TextChanged);
             // 
             // txt_no_of_other_gems
             // 
             this.txt_no_of_other_gems.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_no_of_other_gems.Location = new System.Drawing.Point(742, 514);
-            this.txt_no_of_other_gems.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_no_of_other_gems.Location = new System.Drawing.Point(989, 633);
+            this.txt_no_of_other_gems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_no_of_other_gems.Name = "txt_no_of_other_gems";
-            this.txt_no_of_other_gems.Size = new System.Drawing.Size(199, 24);
+            this.txt_no_of_other_gems.Size = new System.Drawing.Size(264, 29);
             this.txt_no_of_other_gems.TabIndex = 6;
-            this.txt_no_of_other_gems.Text = "0";
+            this.txt_no_of_other_gems.TextChanged += new System.EventHandler(this.txt_no_of_other_gems_TextChanged);
             // 
             // txt_other_gems
             // 
@@ -238,9 +245,10 @@
             "WHITE SAPPHIRE",
             "BLUE SAPPHIRES",
             "RUBIES"});
-            this.txt_other_gems.Location = new System.Drawing.Point(252, 580);
+            this.txt_other_gems.Location = new System.Drawing.Point(336, 714);
+            this.txt_other_gems.Margin = new System.Windows.Forms.Padding(4);
             this.txt_other_gems.Name = "txt_other_gems";
-            this.txt_other_gems.Size = new System.Drawing.Size(208, 23);
+            this.txt_other_gems.Size = new System.Drawing.Size(276, 25);
             this.txt_other_gems.TabIndex = 7;
             this.txt_other_gems.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -249,9 +257,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 14F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(358, 158);
+            this.label8.Location = new System.Drawing.Point(477, 194);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 22);
+            this.label8.Size = new System.Drawing.Size(161, 27);
             this.label8.TabIndex = 67;
             this.label8.Text = "No of Gems  :";
             // 
@@ -260,20 +269,22 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 14F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(640, 157);
+            this.label9.Location = new System.Drawing.Point(909, 196);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(164, 22);
+            this.label9.Size = new System.Drawing.Size(151, 27);
             this.label9.TabIndex = 68;
-            this.label9.Text = "Gem Type            :";
+            this.label9.Text = "Gem Type   :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 14F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(23, 175);
+            this.label7.Location = new System.Drawing.Point(27, 193);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 22);
+            this.label7.Size = new System.Drawing.Size(166, 27);
             this.label7.TabIndex = 66;
             this.label7.Text = "Item Type      :";
             // 
@@ -283,11 +294,12 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 14F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(634, 81);
+            this.label4.Location = new System.Drawing.Point(917, 100);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 22);
+            this.label4.Size = new System.Drawing.Size(143, 27);
             this.label4.TabIndex = 64;
-            this.label4.Text = "Item_Description  :";
+            this.label4.Text = "Metal Type :";
             // 
             // label3
             // 
@@ -295,9 +307,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(21, 132);
+            this.label3.Location = new System.Drawing.Point(24, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 22);
+            this.label3.Size = new System.Drawing.Size(172, 27);
             this.label3.TabIndex = 63;
             this.label3.Text = "Stock No        :";
             // 
@@ -306,9 +319,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(358, 81);
+            this.label6.Location = new System.Drawing.Point(477, 100);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 22);
+            this.label6.Size = new System.Drawing.Size(173, 27);
             this.label6.TabIndex = 65;
             this.label6.Text = "Quantity         :";
             // 
@@ -317,9 +331,10 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 14F);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(1152, 25);
+            this.label19.Location = new System.Drawing.Point(1536, 31);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(137, 22);
+            this.label19.Size = new System.Drawing.Size(173, 27);
             this.label19.TabIndex = 0;
             this.label19.Text = "Stock Image   :";
             // 
@@ -328,9 +343,10 @@
             this.pb1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pb1.Location = new System.Drawing.Point(1156, 62);
+            this.pb1.Location = new System.Drawing.Point(1541, 76);
+            this.pb1.Margin = new System.Windows.Forms.Padding(4);
             this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(169, 144);
+            this.pb1.Size = new System.Drawing.Size(224, 176);
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1.TabIndex = 70;
             this.pb1.TabStop = false;
@@ -355,12 +371,40 @@
             this.groupBox1.Controls.Add(this.txtstock_no);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(43, 139);
+            this.groupBox1.Location = new System.Drawing.Point(57, 171);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1357, 277);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1809, 341);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Details";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(36, 34);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(162, 33);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Main Stock";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(271, 34);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(155, 33);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.Text = "Mini Stock";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txt_gem_type
             // 
@@ -372,21 +416,22 @@
             "STAR SAPPHIRE",
             "STAR RUBY",
             "CAT\'S EYE",
-            "YELLOW SAPPHIRE",
-            "DIAMOND"});
-            this.txt_gem_type.Location = new System.Drawing.Point(823, 162);
+            "YELLOW SAPPHIRE"});
+            this.txt_gem_type.Location = new System.Drawing.Point(1097, 199);
+            this.txt_gem_type.Margin = new System.Windows.Forms.Padding(4);
             this.txt_gem_type.Name = "txt_gem_type";
-            this.txt_gem_type.Size = new System.Drawing.Size(288, 23);
+            this.txt_gem_type.Size = new System.Drawing.Size(383, 25);
             this.txt_gem_type.TabIndex = 4;
             this.txt_gem_type.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txt_qty
             // 
             this.txt_qty.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_qty.Location = new System.Drawing.Point(495, 81);
+            this.txt_qty.Location = new System.Drawing.Point(660, 100);
+            this.txt_qty.Margin = new System.Windows.Forms.Padding(4);
             this.txt_qty.Name = "txt_qty";
             this.txt_qty.ReadOnly = true;
-            this.txt_qty.Size = new System.Drawing.Size(97, 25);
+            this.txt_qty.Size = new System.Drawing.Size(128, 29);
             this.txt_qty.TabIndex = 3;
             this.txt_qty.Text = "01";
             this.txt_qty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -394,12 +439,33 @@
             // txt_no_of_gems
             // 
             this.txt_no_of_gems.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_no_of_gems.Location = new System.Drawing.Point(495, 159);
-            this.txt_no_of_gems.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_no_of_gems.Location = new System.Drawing.Point(660, 196);
+            this.txt_no_of_gems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_no_of_gems.Name = "txt_no_of_gems";
-            this.txt_no_of_gems.Size = new System.Drawing.Size(97, 24);
+            this.txt_no_of_gems.Size = new System.Drawing.Size(128, 29);
             this.txt_no_of_gems.TabIndex = 3;
             this.txt_no_of_gems.Text = "0";
+            this.txt_no_of_gems.TextChanged += new System.EventHandler(this.txt_no_of_gems_TextChanged);
+            // 
+            // combo_item_type
+            // 
+            this.combo_item_type.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_item_type.FormattingEnabled = true;
+            this.combo_item_type.Items.AddRange(new object[] {
+            "RING",
+            "PENDANT",
+            "NECKLACE",
+            "BRACELET",
+            "CUFFLINK",
+            "EARING",
+            "Broach",
+            "Tie-Pin"});
+            this.combo_item_type.Location = new System.Drawing.Point(208, 192);
+            this.combo_item_type.Margin = new System.Windows.Forms.Padding(4);
+            this.combo_item_type.Name = "combo_item_type";
+            this.combo_item_type.Size = new System.Drawing.Size(220, 25);
+            this.combo_item_type.TabIndex = 2;
+            this.combo_item_type.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // combo_itemk_description
             // 
@@ -412,14 +478,15 @@
             "14KT YELLOW GOLD",
             "18KT YELLOW GOLD",
             "10KT WHITE GOLD",
-            "10KT WHITE GOLD",
+            "9KT WHITE GOLD",
             "18KT WHITE GOLD",
             "PLATINUM",
             "SILVER",
             "14KT W/G + WHITE 14KT Y/G "});
-            this.combo_itemk_description.Location = new System.Drawing.Point(823, 80);
+            this.combo_itemk_description.Location = new System.Drawing.Point(1097, 98);
+            this.combo_itemk_description.Margin = new System.Windows.Forms.Padding(4);
             this.combo_itemk_description.Name = "combo_itemk_description";
-            this.combo_itemk_description.Size = new System.Drawing.Size(288, 23);
+            this.combo_itemk_description.Size = new System.Drawing.Size(383, 25);
             this.combo_itemk_description.TabIndex = 1;
             this.combo_itemk_description.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -429,45 +496,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtstock_no.Enabled = false;
             this.txtstock_no.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstock_no.Location = new System.Drawing.Point(161, 133);
+            this.txtstock_no.Location = new System.Drawing.Point(208, 101);
+            this.txtstock_no.Margin = new System.Windows.Forms.Padding(4);
             this.txtstock_no.Name = "txtstock_no";
-            this.txtstock_no.Size = new System.Drawing.Size(166, 25);
+            this.txtstock_no.Size = new System.Drawing.Size(220, 29);
             this.txtstock_no.TabIndex = 0;
-            // 
-            // combo_item_type
-            // 
-            this.combo_item_type.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_item_type.FormattingEnabled = true;
-            this.combo_item_type.Items.AddRange(new object[] {
-            "RING",
-            "PENDAN",
-            "BRACELT",
-            "EARING",
-            "NECKLES",
-            "CUFFLING",
-            "TIE PIN",
-            "BROACH"});
-            this.combo_item_type.Location = new System.Drawing.Point(161, 178);
-            this.combo_item_type.Name = "combo_item_type";
-            this.combo_item_type.Size = new System.Drawing.Size(166, 23);
-            this.combo_item_type.TabIndex = 2;
-            this.combo_item_type.SelectedIndexChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txt_ID
             // 
-            this.txt_ID.Location = new System.Drawing.Point(518, 63);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ID.Location = new System.Drawing.Point(691, 78);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(134, 20);
+            this.txt_ID.Size = new System.Drawing.Size(177, 22);
             this.txt_ID.TabIndex = 0;
             this.txt_ID.Visible = false;
             // 
             // Stock_Type
             // 
-            this.Stock_Type.Location = new System.Drawing.Point(518, 99);
-            this.Stock_Type.Margin = new System.Windows.Forms.Padding(2);
+            this.Stock_Type.Location = new System.Drawing.Point(691, 122);
+            this.Stock_Type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Stock_Type.Name = "Stock_Type";
-            this.Stock_Type.Size = new System.Drawing.Size(134, 20);
+            this.Stock_Type.Size = new System.Drawing.Size(177, 22);
             this.Stock_Type.TabIndex = 1;
             this.Stock_Type.Text = "Jewellery";
             this.Stock_Type.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -479,7 +528,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "        Upload";
+            this.bunifuFlatButton1.ButtonText = "                   Upload";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.ForeColor = System.Drawing.Color.Coral;
@@ -495,16 +544,16 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 60D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(1200, 364);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(1600, 448);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(168, 32);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(224, 39);
             this.bunifuFlatButton1.TabIndex = 13;
-            this.bunifuFlatButton1.Text = "        Upload";
+            this.bunifuFlatButton1.Text = "                   Upload";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -531,14 +580,14 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 60D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(866, 63);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnupdate.Location = new System.Drawing.Point(1449, 78);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(5);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnupdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnupdate.OnHoverTextColor = System.Drawing.Color.White;
             this.btnupdate.selected = false;
-            this.btnupdate.Size = new System.Drawing.Size(153, 47);
+            this.btnupdate.Size = new System.Drawing.Size(204, 58);
             this.btnupdate.TabIndex = 11;
             this.btnupdate.Text = "  Update";
             this.btnupdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -568,14 +617,14 @@
             this.btnsave.IconVisible = true;
             this.btnsave.IconZoom = 60D;
             this.btnsave.IsTab = false;
-            this.btnsave.Location = new System.Drawing.Point(1055, 70);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsave.Location = new System.Drawing.Point(1449, 78);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(5);
             this.btnsave.Name = "btnsave";
             this.btnsave.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnsave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnsave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnsave.selected = false;
-            this.btnsave.Size = new System.Drawing.Size(153, 47);
+            this.btnsave.Size = new System.Drawing.Size(204, 58);
             this.btnsave.TabIndex = 10;
             this.btnsave.Text = "   SAVE";
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -589,7 +638,7 @@
             this.btn_delete.BackColor = System.Drawing.Color.DarkCyan;
             this.btn_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_delete.BorderRadius = 0;
-            this.btn_delete.ButtonText = "  Delete";
+            this.btn_delete.ButtonText = "                 Delete";
             this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_delete.DisabledColor = System.Drawing.Color.Gray;
             this.btn_delete.Iconcolor = System.Drawing.Color.Transparent;
@@ -604,16 +653,16 @@
             this.btn_delete.IconVisible = true;
             this.btn_delete.IconZoom = 60D;
             this.btn_delete.IsTab = false;
-            this.btn_delete.Location = new System.Drawing.Point(1247, 70);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delete.Location = new System.Drawing.Point(1663, 78);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(5);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btn_delete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_delete.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_delete.selected = false;
-            this.btn_delete.Size = new System.Drawing.Size(153, 47);
+            this.btn_delete.Size = new System.Drawing.Size(204, 58);
             this.btn_delete.TabIndex = 12;
-            this.btn_delete.Text = "  Delete";
+            this.btn_delete.Text = "                 Delete";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.Textcolor = System.Drawing.Color.White;
             this.btn_delete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -622,9 +671,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(678, 70);
+            this.label11.Location = new System.Drawing.Point(904, 86);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.Size = new System.Drawing.Size(54, 17);
             this.label11.TabIndex = 88;
             this.label11.Text = "label11";
             this.label11.Visible = false;
@@ -632,9 +682,10 @@
             // hello
             // 
             this.hello.AutoSize = true;
-            this.hello.Location = new System.Drawing.Point(678, 88);
+            this.hello.Location = new System.Drawing.Point(904, 108);
+            this.hello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hello.Name = "hello";
-            this.hello.Size = new System.Drawing.Size(13, 13);
+            this.hello.Size = new System.Drawing.Size(16, 17);
             this.hello.TabIndex = 93;
             this.hello.Text = "h";
             this.hello.Visible = false;
@@ -645,9 +696,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 7);
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 31);
+            this.label1.Size = new System.Drawing.Size(442, 38);
             this.label1.TabIndex = 94;
             this.label1.Text = "Stock Entry for [JEWELRY]";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -657,9 +709,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 699);
+            this.pictureBox1.Location = new System.Drawing.Point(63, 860);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 114);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 96;
             this.pictureBox1.TabStop = false;
@@ -669,9 +722,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(179, 699);
+            this.pictureBox2.Location = new System.Drawing.Point(239, 860);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox2.Size = new System.Drawing.Size(143, 114);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 98;
             this.pictureBox2.TabStop = false;
@@ -681,9 +735,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(310, 699);
+            this.pictureBox3.Location = new System.Drawing.Point(413, 860);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox3.Size = new System.Drawing.Size(143, 114);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 100;
             this.pictureBox3.TabStop = false;
@@ -693,9 +748,10 @@
             this.pictureBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Location = new System.Drawing.Point(443, 699);
+            this.pictureBox4.Location = new System.Drawing.Point(591, 860);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox4.Size = new System.Drawing.Size(143, 114);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 102;
             this.pictureBox4.TabStop = false;
@@ -705,9 +761,10 @@
             this.pictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(578, 699);
+            this.pictureBox5.Location = new System.Drawing.Point(771, 860);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox5.Size = new System.Drawing.Size(143, 114);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 104;
             this.pictureBox5.TabStop = false;
@@ -717,9 +774,10 @@
             this.pictureBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Location = new System.Drawing.Point(714, 699);
+            this.pictureBox6.Location = new System.Drawing.Point(952, 860);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox6.Size = new System.Drawing.Size(143, 114);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 106;
             this.pictureBox6.TabStop = false;
@@ -729,9 +787,10 @@
             this.pictureBox7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Location = new System.Drawing.Point(846, 699);
+            this.pictureBox7.Location = new System.Drawing.Point(1128, 860);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox7.Size = new System.Drawing.Size(143, 114);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 108;
             this.pictureBox7.TabStop = false;
@@ -741,9 +800,10 @@
             this.pictureBox8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Location = new System.Drawing.Point(982, 699);
+            this.pictureBox8.Location = new System.Drawing.Point(1309, 860);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox8.Size = new System.Drawing.Size(143, 114);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 110;
             this.pictureBox8.TabStop = false;
@@ -753,9 +813,10 @@
             this.pictureBox9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Location = new System.Drawing.Point(1117, 699);
+            this.pictureBox9.Location = new System.Drawing.Point(1489, 860);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(108, 93);
+            this.pictureBox9.Size = new System.Drawing.Size(143, 114);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 112;
             this.pictureBox9.TabStop = false;
@@ -766,7 +827,7 @@
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "        Upload";
+            this.bunifuFlatButton2.ButtonText = "";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton2.ForeColor = System.Drawing.Color.Coral;
@@ -780,18 +841,17 @@
             this.bunifuFlatButton2.IconRightVisible = true;
             this.bunifuFlatButton2.IconRightZoom = 0D;
             this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 40D;
+            this.bunifuFlatButton2.IconZoom = 100D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(1253, 729);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(1682, 891);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(147, 32);
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(49, 44);
             this.bunifuFlatButton2.TabIndex = 14;
-            this.bunifuFlatButton2.Text = "        Upload";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -800,11 +860,13 @@
             // TB_File_Path
             // 
             this.TB_File_Path.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TB_File_Path.Location = new System.Drawing.Point(47, 665);
+            this.TB_File_Path.Location = new System.Drawing.Point(63, 818);
+            this.TB_File_Path.Margin = new System.Windows.Forms.Padding(4);
             this.TB_File_Path.Name = "TB_File_Path";
-            this.TB_File_Path.Size = new System.Drawing.Size(399, 20);
+            this.TB_File_Path.Size = new System.Drawing.Size(531, 22);
             this.TB_File_Path.TabIndex = 113;
             this.TB_File_Path.Text = "C:\\\\STOCKIMAGES\\\\";
+            this.TB_File_Path.Visible = false;
             // 
             // btn_Refresh
             // 
@@ -827,19 +889,20 @@
             this.btn_Refresh.IconVisible = true;
             this.btn_Refresh.IconZoom = 60D;
             this.btn_Refresh.IsTab = false;
-            this.btn_Refresh.Location = new System.Drawing.Point(1247, 72);
-            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Refresh.Location = new System.Drawing.Point(1663, 78);
+            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btn_Refresh.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Refresh.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Refresh.selected = false;
-            this.btn_Refresh.Size = new System.Drawing.Size(153, 47);
+            this.btn_Refresh.Size = new System.Drawing.Size(204, 58);
             this.btn_Refresh.TabIndex = 114;
             this.btn_Refresh.Text = "  Refresh";
             this.btn_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Refresh.Textcolor = System.Drawing.Color.White;
             this.btn_Refresh.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // panel2
             // 
@@ -850,70 +913,54 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1440, 42);
+            this.panel2.Size = new System.Drawing.Size(1920, 52);
             this.panel2.TabIndex = 115;
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(1367, 6);
+            this.pictureBox12.Location = new System.Drawing.Point(1823, 7);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox12.Size = new System.Drawing.Size(44, 41);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 5;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(1397, 5);
+            this.pictureBox13.Location = new System.Drawing.Point(1863, 6);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox13.Size = new System.Drawing.Size(48, 42);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 5;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(1332, 11);
+            this.pictureBox14.Location = new System.Drawing.Point(1776, 14);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(29, 24);
+            this.pictureBox14.Size = new System.Drawing.Size(39, 30);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 2;
             this.pictureBox14.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(25, 43);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(130, 28);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Main Stock";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(25, 77);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 28);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Mini Stock";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // S_Jewelry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.ClientSize = new System.Drawing.Size(1440, 807);
+            this.ClientSize = new System.Drawing.Size(1920, 982);
+            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.TB_File_Path);
@@ -939,10 +986,10 @@
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnupdate);
-            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "S_Jewelry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f";
@@ -1027,7 +1074,7 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        public System.Windows.Forms.RadioButton radioButton1;
     }
 }

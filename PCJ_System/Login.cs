@@ -62,15 +62,15 @@ namespace PCJ_System
             {
                 try
                 {
-                    SqlCommand selectCommand = new SqlCommand(" Select * from New_User where User_Name=@USER_ID and Password=@PASS", conn);
+                    SqlCommand selectCommand = new SqlCommand("Select * from New_User where User_Name=@USER_ID and Password=@PASS", conn);
                     selectCommand.Parameters.Add(new SqlParameter("USER_ID", txtusername.Text.ToString()));
                     String password = "";
 
                     using (SHA1 sha1 = SHA1.Create())
                     {
-                        //                     sha1.Initialize();
+                        //sha1.Initialize();
                         byte[] data = sha1.ComputeHash(Encoding.UTF8.GetBytes(txtpassword.Text));
-
+                        
                         StringBuilder sb = new StringBuilder();
                         for (int i = 0; i < data.Length; ++i)
                         {
@@ -94,21 +94,30 @@ namespace PCJ_System
                                 GlobalVariablesClass.VariableOne = txtusername.Text;
                                // MessageBox.Show("Welcome ", "Admin Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Admin_Menu frm = new Admin_Menu();
+                                frm.SetUserType(UserType);
                                 frm.bunifuFlatButton3.Visible = true;
-                                frm.SC_JE.Visible = false;
-                                frm.SC_GE.Visible = false;
+                                frm.SC_JE.Visible = true;
+                                frm.SC_JE.Visible = true;
+                                frm.bunifuFlatButton5.Visible = true;
                                 frm.Show();
-                    this.Hide();
+                               
+                                this.Hide();
                             }
                             else if (UserType == "StockController")
                             {
+                                // GlobalVariablesClass.isAdmin = false;
                                 GlobalVariablesClass.VariableOne = txtusername.Text;
                                 MessageBox.Show("Welcome ", "User Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Admin_Menu frm = new Admin_Menu();
+                                frm.SetUserType(UserType);
                                 frm.bunifuFlatButton3.Visible = false;
                                 frm.bunifuFlatButton7.Visible = false;
                                 frm.bunifuFlatButton6.Visible = false;
+                                frm.SC_GEMS.Visible = true;
+                                frm.SC_JEWLRY.Visible = true;
                                 frm.Show();
+
+
                                 this.Hide();
                             }
                         }
@@ -130,6 +139,14 @@ namespace PCJ_System
 
         private void Login_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            In_certi op = new In_certi();
+            op.Show();
+            this.Hide();
 
         }
     }

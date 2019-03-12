@@ -16,7 +16,7 @@ namespace PCJ_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_Menu());
+            Application.Run(new Login());
         }
     }
 }

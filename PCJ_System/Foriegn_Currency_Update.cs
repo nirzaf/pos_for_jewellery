@@ -42,7 +42,8 @@ namespace PCJ_System
             execute.SelectCommand.ExecuteNonQuery();
             MessageBox.Show("You've updated successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             conn.Close();
-         
+            this.Hide();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,23 +58,14 @@ namespace PCJ_System
                         //Combo
                         command.Parameters.AddWithValue("FC_Type", comboBox1.Text);
                         textBox1.Text = command.ExecuteScalar().ToString();
-
-                        //using (var reader = command.ExecuteReader())
-                        //{
-                        //    if (reader.Read())
-                        //    {
-                        //        textBox1.Text = reader["FC_RATE"].ToString();
-                        //    } else
-                        //    {
-                        //        textBox1.Text = "";
-                        //    }
-                        //}
                     }
                 }
+                
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+            
         }
 
         private void Foriegn_Currency_Update_Load(object sender, EventArgs e)

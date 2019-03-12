@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using System.IO;
 
 
@@ -15,19 +16,24 @@ namespace PCJ_System
 {
     public partial class S_Gems : Form
     {
+        private string[] last_amount = { "", "", "" };
+
         int xy;
         SqlConnection conn;
+
         PictureBox[] pictureBoxes;
         string[] picturePaths;
+
         bool[] pictureIsNew;
 
-        private int stockId = 1;
+        private string stockId = "001";
         private string stockNo = "";
+       
 
         public static class GlobalValue
         {
 
-            public static int UserCreated = 0;
+            //public static int UserCreated = 0;
         }
 
         public S_Gems()
@@ -56,7 +62,7 @@ namespace PCJ_System
             pictureBoxes[6] = pictureBox7;
             pictureBoxes[7] = pictureBox8;
             pictureBoxes[8] = pictureBox9;
-
+            
             picturePaths = new string[pictureBoxes.Length];
             pictureIsNew = new bool[pictureBoxes.Length];
 
@@ -91,7 +97,9 @@ namespace PCJ_System
             {
                 errorProvider1.SetError(txt_cost, "Cannot be empty, Enter the Cost of Gems");
             }
-
+            else if (pb1.Image == null) {
+                errorProvider1.SetError(pb1, "Please add an Image");
+            }
             else
             {
                 conn.Close();
@@ -101,11 +109,10 @@ namespace PCJ_System
 
                 try
                 {
-
                     SqlCommand command = new SqlCommand("INSERT INTO Status_Of_Stocks VALUES (@StockID,@StockNo,@StockType,@Qty,@Weight,@Cost)", conn, tx);
                     command.Parameters.AddWithValue("@StockNo", stockNo);
                     command.Parameters.AddWithValue("@StockID", stockId);
-                    command.Parameters.AddWithValue("@StockType", "Jewellery");
+                    command.Parameters.AddWithValue("@StockType", "Gems");
                     command.Parameters.AddWithValue("@Qty", txtno_of_peices.Text);
                     command.Parameters.AddWithValue("@Weight", txt_weight.Text);
                     command.Parameters.AddWithValue("@Cost", txt_cost.Text);
@@ -116,24 +123,23 @@ namespace PCJ_System
 
                     command.Parameters.AddWithValue("@StockNo", stockNo);
                     command.Parameters.AddWithValue("@StockId", stockId);
-            
+
                     query = "INSERT INTO Stock_Entry VALUES(@StockID,@stock_no,@Stock_Type,@No_of_pieces,@Gem_Type,@Weight,@Item_Description,@Item_Type,@No_of_Gems,@No_of_other_Gems,@Other_Gems,@Weight_of_other_Gems,@Image,@Cost,@Created_Date,@Updated_Date,@User_ID,@Update_UserID,@Imagepath)";
                     command = new SqlCommand(query, conn, tx);
-
                     command.Parameters.AddWithValue("@StockID", stockId);
                     command.Parameters.AddWithValue("@stock_no", stockNo);
-
+                    //combining the stockID
                     command.Parameters.Add("@Stock_Type", SqlDbType.VarChar);
                     command.Parameters["@Stock_Type"].Value = Stock_Type.Text;
 
                     command.Parameters.Add("@No_of_pieces", SqlDbType.Int);
-                    command.Parameters["@No_of_pieces"].Value = txtno_of_peices.Text;
+                    command.Parameters["@No_of_pieces"].Value = Convert.ToInt32(txtno_of_peices.Text);
 
                     command.Parameters.Add("@Gem_Type", SqlDbType.NVarChar);
                     command.Parameters["@Gem_Type"].Value = txt_gems.Text;
 
                     command.Parameters.Add("@Weight", SqlDbType.Float);
-                    command.Parameters["@Weight"].Value = txt_weight.Text;
+                    command.Parameters["@Weight"].Value = Convert.ToDouble(txt_weight.Text);
 
                     command.Parameters.Add("@Item_Description", SqlDbType.NVarChar);
                     command.Parameters["@Item_Description"].Value = sel.combo_itemk_description.Text;
@@ -142,16 +148,16 @@ namespace PCJ_System
                     command.Parameters["@Item_Type"].Value = sel.combo_item_type.Text;
 
                     command.Parameters.Add("@No_of_Gems", SqlDbType.Int);
-                    command.Parameters["@No_of_Gems"].Value = sel.txt_no_of_gems.Text;
+                    command.Parameters["@No_of_Gems"].Value = 0;
 
                     command.Parameters.Add("@No_of_other_Gems", SqlDbType.Int);
-                    command.Parameters["@No_of_other_Gems"].Value = sel.txt_no_of_other_gems.Text;
+                    command.Parameters["@No_of_other_Gems"].Value = 0;
 
                     command.Parameters.Add("@Other_Gems", SqlDbType.NVarChar);
-                    command.Parameters["@Other_Gems"].Value = sel.txt_other_gems.Text;
+                    command.Parameters["@Other_Gems"].Value = "";
 
                     command.Parameters.Add("@Weight_of_other_Gems", SqlDbType.Float);
-                    command.Parameters["@Weight_of_other_Gems"].Value = sel.txt_weight_of_other_gems.Text;
+                    command.Parameters["@Weight_of_other_Gems"].Value = 0.0;
 
                     if (pb1.Image != null)
                     {
@@ -168,7 +174,7 @@ namespace PCJ_System
 
                     command.Parameters.Add("@Cost", SqlDbType.Decimal);
                     //txt_cost.Text = String.Format("{0:n0}", double.Parse(txt_cost.Text));
-                    command.Parameters["@Cost"].Value = txt_cost.Text;
+                    command.Parameters["@Cost"].Value = Convert.ToDouble(txt_cost.Text);
 
                     command.Parameters.Add("@Created_Date", SqlDbType.DateTime);
                     command.Parameters["@Created_Date"].Value = label11.Text;
@@ -190,7 +196,6 @@ namespace PCJ_System
                     if (!Directory.Exists(path))
                     {
                         Directory.CreateDirectory(path);
-                        // MessageBox.Show("Folder Created ");
                     }
 
                     for (int i = 0; i < pictureBoxes.Length; ++i)
@@ -201,7 +206,6 @@ namespace PCJ_System
                             File.Copy(picturePaths[i], targetPath, true);
                         }
                     }
-
                     command.ExecuteNonQuery();
                     tx.Commit();
                     conn.Close();
@@ -221,7 +225,7 @@ namespace PCJ_System
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlgOpenFileDialog = new OpenFileDialog();
-            dlgOpenFileDialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg|*.jpg|All files(*.*)|*.*";
+            dlgOpenFileDialog.Filter = "jpg files(*.jpg|*.jpg|png files(*.png)|*.png|All files(*.*)|*.*";
             if (dlgOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Image image = Bitmap.FromFile(dlgOpenFileDialog.FileName);
@@ -237,36 +241,41 @@ namespace PCJ_System
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-
+            Match m = Regex.Match(txtstock_no.Text, "([A-Za-z]+)([0-9]+)");
+            if (m.Groups.Count != 3)
+            {
+                return;
+            }
+            stockId = m.Groups[2].Value;
+            stockNo = m.Groups[1].Value;
 
             try
             {
                 conn.Close();
                 conn.Open();
                 String query;
-
+                String query2;
+                
                 if (pb1.Image == null)
                 {
-                    query = "Update Stock_Entry  set Stock_Type = @Stock_Type, Stock_No = @Stock_No , No_of_pieces = @No_of_pieces, Gem_Type = @Gem_Type, Weight = @Weight, Cost = @Cost, Update_Date = @Update_Date, Update_UserID=@Update_UserID, Imagepath= @Imagepath WHERE  Stock_No = @Stock_No";
+                    query = "Update Stock_Entry  set No_of_pieces = @No_of_pieces, Gem_Type = @Gem_Type, Weight = @Weight, Cost = @Cost, Update_Date = @Update_Date, Update_UserID=@Update_UserID, Imagepath= @Imagepath WHERE  Stock_No = @Stock_No AND Stock_ID=@Stock_ID";
                 }
                 else
                 {
-                    query = "Update Stock_Entry  set Stock_Type = @Stock_Type, Stock_No = @Stock_No , No_of_pieces = @No_of_pieces, Gem_Type = @Gem_Type, Weight = @Weight, Image = @Image, Cost = @Cost, Update_Date = @Update_Date, Update_UserID=@Update_UserID, Imagepath= @Imagepath WHERE  Stock_No = @Stock_No";
+                    query = "Update Stock_Entry  set No_of_pieces = @No_of_pieces, Gem_Type = @Gem_Type, Weight = @Weight, Image = @Image, Cost = @Cost, Update_Date = @Update_Date, Update_UserID=@Update_UserID, Imagepath= @Imagepath WHERE  Stock_No = @Stock_No AND Stock_ID=@Stock_ID";
                 }
-
                 SqlCommand command = new SqlCommand(query, conn);
-
-
                 //conn.Close();
                 //conn.Open();
-
                 /*    SqlCommand command = new SqlCommand("Update Stock_Entry  set Stock_Type = @Stock_Type, Stock_No = @Stock_No , No_of_pieces = @No_of_pieces, Gem_Type = @Gem_Type, Weight = @Weight, Image = @Image, Cost = @Cost, Update_Date = @Update_Date, Update_UserID=@Update_UserID WHERE  Stock_No = @Stock_No", conn);*/
-
                 command.Parameters.Add("@Stock_Type", SqlDbType.VarChar).Value = Stock_Type.Text;
-                command.Parameters.Add("@stock_no", SqlDbType.NVarChar).Value = txtstock_no.Text;
+                // command.Parameters.Add("@stock_no", SqlDbType.NVarChar).Value = txtstock_no.Text;
+
+                command.Parameters.AddWithValue("Stock_No", stockNo);
+                command.Parameters.AddWithValue("Stock_ID", stockId);
+
                 command.Parameters.Add("@No_of_pieces", SqlDbType.Int).Value = txtno_of_peices.Text;
                 command.Parameters.Add("@Gem_Type", SqlDbType.NVarChar).Value = txt_gems.Text;
-
                 command.Parameters.Add("@Weight", SqlDbType.Float).Value = txt_weight.Text;
 
                 /*  using (MemoryStream ms = new MemoryStream())
@@ -284,11 +293,8 @@ namespace PCJ_System
                 }
 
                 command.Parameters.Add("@Cost", SqlDbType.Decimal).Value = txt_cost.Text;
-
                 command.Parameters.Add("@Update_Date", SqlDbType.DateTime).Value = label11.Text;
-
                 command.Parameters.Add("@Update_UserID", SqlDbType.NVarChar).Value = hello.Text;
-
                 command.Parameters.Add("@Imagepath", SqlDbType.NVarChar);
                 command.Parameters["@Imagepath"].Value = TB_File_Path.Text + txtstock_no.Text + "\\";
 
@@ -303,57 +309,63 @@ namespace PCJ_System
                     }
                 }
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("You've updated successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (command.ExecuteNonQuery() >= 1)
+                {
+                    MessageBox.Show("You've updated successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                query2 = "Update Status_of_stocks set Qty = @No_of_pieces, Weight = @Weight, Cost = @Cost WHERE StockNo=@Stock_No AND StockID=@Stock_ID";
+                SqlCommand cmd = new SqlCommand(query2, conn);
+                cmd.Parameters.AddWithValue("Stock_No", stockNo);
+                cmd.Parameters.AddWithValue("Stock_ID", stockId);
+
+                cmd.Parameters.Add("@No_of_pieces", SqlDbType.Int).Value = txtno_of_peices.Text;
+                cmd.Parameters.Add("@Weight", SqlDbType.Float).Value = txt_weight.Text;
+                cmd.Parameters.Add("@Cost", SqlDbType.Decimal).Value = txt_cost.Text;
+                cmd.ExecuteReader();
+
+
                 conn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             conn.Close();
             this.Close();
-
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
+            Match m = Regex.Match(txtstock_no.Text, "([A-Za-z]+)([0-9]+)");
+            if (m.Groups.Count != 3)
+            {
+                return;
+            }
+            stockId = m.Groups[2].Value;
+            stockNo = m.Groups[1].Value;
+
             try
             {
                 conn.Close();
                 conn.Open();
+                String DeleteQuery = "Delete from Stock_Entry where Stock_No=@Stock_No AND Stock_ID=@Stock_ID";
+                SqlCommand command = new SqlCommand(DeleteQuery, conn);
+                command.Parameters.AddWithValue("Stock_No", stockNo);
+                command.Parameters.AddWithValue("Stock_ID", stockId);
 
-                String DeleteQuery = "Delete from Stock_Entry where Stock_No ='" + txtstock_no.Text + "';";
+                String DeleteQ2= "Delete from Status_of_Stocks where StockNo=@StockNo AND StockID=@StockID";
+                SqlCommand command2 = new SqlCommand(DeleteQ2, conn);
+                command2.Parameters.AddWithValue("StockNo", stockNo);
+                command2.Parameters.AddWithValue("StockID", stockId);
 
                 String path = TB_File_Path.Text + txtstock_no.Text + "\\";
-
-                /*  if (!Directory.Exists(path))
-                  {
-                      Directory.Delete(path);
-                      // MessageBox.Show("Folder Created ");
-                  }
-
-                  for (int i = 0; i < pictureBoxes.Length; ++i)
-                  {
-                      if (pictureIsNew[i])
-                      {
-                          string targetPath = String.Format("{0}img-{1:D4}{2}", path, i, Path.GetExtension(picturePaths[i]));
-                          File.Copy(picturePaths[i], targetPath, true);
-                      }
-                  }*/
-
-                SqlDataAdapter execute = new SqlDataAdapter(DeleteQuery, conn);
-                execute.SelectCommand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
                 MessageBox.Show("You've deleted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conn.Close();
-                this.Close();
-
-
-
-
+               conn.Close();
+               this.Close();
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -375,11 +387,11 @@ namespace PCJ_System
 
                 if (reader.HasRows && reader.Read())
                 {
-                    stockId = reader.GetInt32(0) + 1;
+                    stockId = String.Format("{0:D3}", (Int32.Parse(reader.GetString(0))) + 1);
                 }
                 else
                 {
-                    stockId = 1;
+                    stockId = "001";
                 }
                 conn.Close();
             }
@@ -399,7 +411,7 @@ namespace PCJ_System
 
             getLastNumbers();
 
-            txtstock_no.Text = string.Format("{0}{1:D3}", stockNo, stockId);
+            txtstock_no.Text = stockNo + stockId;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -407,9 +419,9 @@ namespace PCJ_System
 
         }
 
+       
         private void S_Gems_Load_1(object sender, EventArgs e)
         {
-
             //getLastNumbers();
             DateTime dateTime = DateTime.Now;
             this.label11.Text = dateTime.ToString();
@@ -420,7 +432,6 @@ namespace PCJ_System
             pictureBox1.Image = Image.FromStream(fs);
             fs.Close();*/
 
-
             String path = (TB_File_Path.Text + txtstock_no.Text + "\\");
             //string imgdir = this.dataGridView1.CurrentRow.Cells[17].Value.ToString();
             try {
@@ -430,11 +441,11 @@ namespace PCJ_System
                 {
                     pictureBoxes[xy].Image = Image.FromFile(imgs[xy]);
                     picturePaths[xy] = imgs[xy];
-                    //MessageBox.Show(imgs[i]);
+                   // MessageBox.Show(imgs[i]);
                 }
             } catch (Exception ex)
             {
-                // no images
+               // MessageBox.Show(ex.ToString(), "Error Message: No Images", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -476,8 +487,6 @@ namespace PCJ_System
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-
-
             try
             {
                 xy %= pictureBoxes.Length;
@@ -491,32 +500,22 @@ namespace PCJ_System
                     pictureIsNew[xy] = true;
                     xy += 1;
                 }
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
-
+            
             /*  OpenFileDialog opFile = new OpenFileDialog();
               opFile.Filter = "png files(*.png)|*.png|jpg files(*.jpg|*.jpg|All files(*.*)|*.*";
               if (opFile.ShowDialog() == DialogResult.OK)
               {
                   Image image = Bitmap.FromFile(opFile.FileName);
                   pictureBox1.Image = image;
-
               }
-
-
-               */
-
-            // <---
-
-
-
-
+             */
+     // <---
+     
         }
 
         private void btnrefresh_Click(object sender, EventArgs e)
@@ -535,14 +534,15 @@ namespace PCJ_System
               else if (txt_cost.Text != null)
               {
                   txt_cost.GotFocus += new EventHandler(this.TextGotFocus);
+
                   txt_cost.LostFocus += new EventHandler(this.TextLostFocus);
               }*/
             txtno_of_peices.Text = "";
             txt_weight.Text = "";
             txt_cost.Text = "";
-            txtstock_no.Text = "";
+            txt_gems.Text = "";
             cmbStockType.Text = "";
-            txtstock_no.Text = "";
+        //    txtstock_no.Text = "";
             pb1.Image = null;
             pictureBox1.Image = null;
             pictureBox2.Image = null;
@@ -553,8 +553,6 @@ namespace PCJ_System
             pictureBox7.Image = null;
             pictureBox8.Image = null;
             pictureBox9.Image = null;
-
-
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -567,6 +565,47 @@ namespace PCJ_System
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void txtno_of_peices_TextChanged(object sender, EventArgs e)
+        {
+            /*
+            int index = 0;
 
+           if (!Regex.IsMatch(txtno_of_peices.Text, "^[0-9]+\\.?[0-9]?[0-9]?$"))
+            {
+                // txtTot1.Text = "";
+                if (txtno_of_peices.Text != "")
+                {
+                    txtno_of_peices.Text = last_amount[index];
+                }
+            }*/
+        }
+
+        private void txt_weight_TextChanged(object sender, EventArgs e)
+        {
+            /*int index = 0;
+
+            if (!Regex.IsMatch(txt_weight.Text, "^[0-9]+\\.?[0-9]?[0-9]?$"))
+            {
+                // txtTot1.Text = "";
+                if (txt_weight.Text != "")
+                {
+                    txt_weight.Text = last_amount[index];
+                }
+            }*/
+        }
+
+        private void txt_cost_TextChanged(object sender, EventArgs e)
+        {
+            /*int index = 0;
+
+            if (!Regex.IsMatch(txt_cost.Text, "^[0-9]+\\.?[0-9]?[0-9]?$"))
+            {
+                // txtTot1.Text = "";
+                if (txt_cost.Text != "")
+                {
+                    txt_cost.Text = last_amount[index];
+                }
+            }*/
+        }
     }
 }

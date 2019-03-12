@@ -14,11 +14,14 @@ namespace PCJ_System
     public partial class Admin_Menu : Form
     {
 
-        SqlConnection conn;
+        //SqlConnection conn;
         Bunifu.Framework.UI.Drag MoveForm = new Bunifu.Framework.UI.Drag();
         public Admin_Menu()
         {
+
             InitializeComponent();
+            //invoice_Certificate1.UserType = "Admin";
+            //invoice_Certificate2.U
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -45,7 +48,7 @@ namespace PCJ_System
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-          outStanding_of_Stocks1.BringToFront();
+                      //outStanding_of_Stocks1.BringToFront();
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
@@ -66,8 +69,8 @@ namespace PCJ_System
 
         private void b2_Click(object sender, EventArgs e)
         {
-            stocks_Jewelry1.BringToFront();
-            
+            //stocks_Jewelry1.BringToFront();
+
         }
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
@@ -80,13 +83,12 @@ namespace PCJ_System
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
           stocks_Gems1.BringToFront();
-           
-
+      
         }
 
         private void bunifuFlatButton5_Click_1(object sender, EventArgs e)
         {
-          outStanding_of_Stocks1.BringToFront();
+          //outStanding_of_Stocks1.BringToFront();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -145,12 +147,44 @@ namespace PCJ_System
 
         private void bunifuFlatButton8_Click(object sender, EventArgs e)
         {
-            scStocks_Jewelry1.BringToFront();
+            stocks_Jewelry1.BringToFront();
         }
 
         private void bunifuFlatButton9_Click(object sender, EventArgs e)
         {
+            stocks_Gems1.BringToFront();
+        }
+
+        private void dashBoard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton5_Click_2(object sender, EventArgs e)
+        {
             scStocks_Gems1.BringToFront();
+        }
+
+        private void bunifuFlatButton8_Click_1(object sender, EventArgs e)
+        {
+            scStocks_Jewelry1.BringToFront();
+        }
+
+        private void bunifuFlatButton5_Click_3(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuFlatButton5_Click_4(object sender, EventArgs e)
+        {
+            Foriegn_Currency_Update open = new Foriegn_Currency_Update();
+            open.Show();
+        }
+
+        public void SetUserType(String usertype)
+        {
+            invoice_Certificate1.SetUserType(usertype);
+            invoice_Certificate2.SetUserType(usertype);
         }
     }
     }

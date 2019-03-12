@@ -68,7 +68,6 @@ namespace PCJ_System
             {
                 errorProvider1.SetError(txtcon_password, "Password Mismatch");
             }
-
             else
             {
                 try
@@ -98,7 +97,7 @@ namespace PCJ_System
                     MessageBox.Show("You've inserted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
 
-                    SqlDataAdapter data = new SqlDataAdapter("Select * from New_User", conn);
+                    SqlDataAdapter data = new SqlDataAdapter("Select ID,User_Type,User_Name,Create_Date from New_User", conn);
                     DataTable dt = new DataTable();
                     data.Fill(dt);
                     dataGridView1.DataSource = dt;
@@ -106,7 +105,7 @@ namespace PCJ_System
                     combo_usertype.Text = "";
                     txtusername.Text = "";
                     txtpassword.Text = "";
-                    txtcon_password.Text = "";
+                   txtcon_password.Text = "";
                 }
                 catch (Exception ex)
                 {
@@ -133,8 +132,6 @@ namespace PCJ_System
             combo_usertype.Text = selectedRow.Cells[1].Value.ToString();
             txtusername.Text = selectedRow.Cells[2].Value.ToString();
             txtpassword.Text = selectedRow.Cells[3].Value.ToString();
-            
-
         }
 
         private void NewUser_Load(object sender, EventArgs e)
@@ -142,16 +139,13 @@ namespace PCJ_System
             DateTime dateTime = DateTime.Now;
             this.label11.Text = dateTime.ToString();
 
-
-
-
             try
             {
                 conn.Close();
                 conn.Open();
                 SqlDataAdapter sda;
                 DataTable dt1;
-                sda = new SqlDataAdapter("select * FROM New_User", conn);
+                sda = new SqlDataAdapter("select ID,User_Type,User_Name,Create_Date FROM New_User", conn);
                 dt1 = new DataTable();
                 sda.Fill(dt1);
                 dataGridView1.DataSource = dt1;
@@ -179,16 +173,35 @@ namespace PCJ_System
             {
                 try
                 {
+
                     conn.Close();
                     conn.Open();
+                    String password = txtpassword.Text;
+                    // byte[] hash = null;
+
+                    using (SHA1 sha1 = SHA1.Create())
+                    {
+                        // sha1.Initialize();
+                        byte[] hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(password));
+                        StringBuilder sb = new StringBuilder();
+
+                        for (int i = 0; i < hash.Length; ++i)
+                        {
+                            sb.Append(hash[i].ToString("x2"));
+                        }
+                        password = sb.ToString();
+                    }
+
+
                     String UpdateQuery = "Update New_User set User_Type ='" + combo_usertype.Text + "',User_Name ='"
-                        + txtusername.Text + "', Password ='" + txtpassword.Text + "', Create_Date ='" + label11.Text + "'  where ID ='" + txtbx_ID.Text+ "';";
+                        + txtusername.Text + "', Password ='" + password + "', Create_Date ='" + label11.Text + "'  where ID ='" + txtbx_ID.Text+ "';";
+
                     SqlDataAdapter execute = new SqlDataAdapter(UpdateQuery, conn);
                     execute.SelectCommand.ExecuteNonQuery();
                     MessageBox.Show("You've updated successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
 
-                    SqlDataAdapter data = new SqlDataAdapter("Select * from New_User", conn);
+                    SqlDataAdapter data = new SqlDataAdapter("Select ID,User_Type,User_Name,Create_Date from New_User", conn);
                     DataTable dt = new DataTable();
                     data.Fill(dt);
                     dataGridView1.DataSource = dt;
@@ -197,7 +210,6 @@ namespace PCJ_System
                     txtusername.Text = "";
                     txtpassword.Text = "";
                     txtcon_password.Text = "";
-
 
                 }
                 catch (Exception ex)
@@ -230,17 +242,14 @@ namespace PCJ_System
                     MessageBox.Show("You've deleted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
 
-                    SqlDataAdapter data = new SqlDataAdapter("Select * from New_User", conn);
+                    SqlDataAdapter data = new SqlDataAdapter("Select ID,User_Type,User_Name,Create_Date from New_User", conn);
                     DataTable dt = new DataTable();
                     data.Fill(dt);
-                   dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
 
                     combo_usertype.Text = "";
                     txtusername.Text = "";
                     txtpassword.Text = "";
-
-
-
                 }
                 catch (Exception ex)
                 {
@@ -252,7 +261,6 @@ namespace PCJ_System
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-
             combo_usertype.Text = "";
             txtusername.Text = "";
             txtpassword.Text = "";

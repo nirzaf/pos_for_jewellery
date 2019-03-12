@@ -99,7 +99,7 @@
             this.btndelete.IconZoom = 60D;
             this.btndelete.IsTab = false;
             this.btndelete.Location = new System.Drawing.Point(375, 96);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btndelete.Name = "btndelete";
             this.btndelete.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btndelete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -135,7 +135,7 @@
             this.btnupdate.IconZoom = 60D;
             this.btnupdate.IsTab = false;
             this.btnupdate.Location = new System.Drawing.Point(217, 96);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnupdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -172,7 +172,7 @@
             this.btnsave.IconZoom = 60D;
             this.btnsave.IsTab = false;
             this.btnsave.Location = new System.Drawing.Point(53, 98);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnsave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -291,7 +291,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 331);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -306,7 +306,7 @@
             // txtbx_ID
             // 
             this.txtbx_ID.Location = new System.Drawing.Point(244, 152);
-            this.txtbx_ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtbx_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbx_ID.Name = "txtbx_ID";
             this.txtbx_ID.Size = new System.Drawing.Size(156, 20);
             this.txtbx_ID.TabIndex = 4;
@@ -325,7 +325,7 @@
             // button_clear
             // 
             this.button_clear.Location = new System.Drawing.Point(860, 285);
-            this.button_clear.Margin = new System.Windows.Forms.Padding(2);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(86, 19);
             this.button_clear.TabIndex = 48;
@@ -356,7 +356,7 @@
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewUser";
             this.Size = new System.Drawing.Size(1193, 860);
             this.Load += new System.EventHandler(this.NewUser_Load);

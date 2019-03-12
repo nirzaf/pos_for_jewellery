@@ -36,33 +36,24 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noofpiecesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noofGemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noofotherGemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otherGemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightofotherGemsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updateDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updateUserIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imagepathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pCJ_SYSTEM_DBDataSet2 = new PCJ_System.PCJ_SYSTEM_DBDataSet2();
             this.stock_EntryTableAdapter = new PCJ_System.PCJ_SYSTEM_DBDataSet2TableAdapters.Stock_EntryTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Stock_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Create_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Update_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Update_UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockEntryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCJ_SYSTEM_DBDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -179,6 +170,7 @@
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(174, 27);
             this.bunifuMetroTextbox1.TabIndex = 63;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMetroTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
             this.bunifuMetroTextbox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.bunifuMetroTextbox1_KeyUp);
             // 
             // label2
@@ -192,169 +184,6 @@
             this.label2.Size = new System.Drawing.Size(114, 18);
             this.label2.TabIndex = 65;
             this.label2.Text = "Search Stock  :";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(85)))), ((int)(((byte)(114)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.stockTypeDataGridViewTextBoxColumn,
-            this.stockNoDataGridViewTextBoxColumn,
-            this.noofpiecesDataGridViewTextBoxColumn,
-            this.gemTypeDataGridViewTextBoxColumn,
-            this.weightDataGridViewTextBoxColumn,
-            this.itemDescriptionDataGridViewTextBoxColumn,
-            this.itemTypeDataGridViewTextBoxColumn,
-            this.noofGemsDataGridViewTextBoxColumn,
-            this.noofotherGemsDataGridViewTextBoxColumn,
-            this.otherGemsDataGridViewTextBoxColumn,
-            this.weightofotherGemsDataGridViewTextBoxColumn,
-            this.imageDataGridViewImageColumn,
-            this.costDataGridViewTextBoxColumn,
-            this.createDateDataGridViewTextBoxColumn,
-            this.updateDateDataGridViewTextBoxColumn,
-            this.userIDDataGridViewTextBoxColumn,
-            this.updateUserIDDataGridViewTextBoxColumn,
-            this.imagepathDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.stockEntryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 179);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1110, 650);
-            this.dataGridView1.TabIndex = 64;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // stockTypeDataGridViewTextBoxColumn
-            // 
-            this.stockTypeDataGridViewTextBoxColumn.DataPropertyName = "Stock_Type";
-            this.stockTypeDataGridViewTextBoxColumn.HeaderText = "Stock_Type";
-            this.stockTypeDataGridViewTextBoxColumn.Name = "stockTypeDataGridViewTextBoxColumn";
-            // 
-            // stockNoDataGridViewTextBoxColumn
-            // 
-            this.stockNoDataGridViewTextBoxColumn.DataPropertyName = "Stock_No";
-            this.stockNoDataGridViewTextBoxColumn.HeaderText = "Stock_No";
-            this.stockNoDataGridViewTextBoxColumn.Name = "stockNoDataGridViewTextBoxColumn";
-            // 
-            // noofpiecesDataGridViewTextBoxColumn
-            // 
-            this.noofpiecesDataGridViewTextBoxColumn.DataPropertyName = "No_of_pieces";
-            this.noofpiecesDataGridViewTextBoxColumn.HeaderText = "No_of_pieces";
-            this.noofpiecesDataGridViewTextBoxColumn.Name = "noofpiecesDataGridViewTextBoxColumn";
-            // 
-            // gemTypeDataGridViewTextBoxColumn
-            // 
-            this.gemTypeDataGridViewTextBoxColumn.DataPropertyName = "Gem_Type";
-            this.gemTypeDataGridViewTextBoxColumn.HeaderText = "Gem_Type";
-            this.gemTypeDataGridViewTextBoxColumn.Name = "gemTypeDataGridViewTextBoxColumn";
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            // 
-            // itemDescriptionDataGridViewTextBoxColumn
-            // 
-            this.itemDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Item_Description";
-            this.itemDescriptionDataGridViewTextBoxColumn.HeaderText = "Item_Description";
-            this.itemDescriptionDataGridViewTextBoxColumn.Name = "itemDescriptionDataGridViewTextBoxColumn";
-            this.itemDescriptionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // itemTypeDataGridViewTextBoxColumn
-            // 
-            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "Item_Type";
-            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Item_Type";
-            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
-            this.itemTypeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // noofGemsDataGridViewTextBoxColumn
-            // 
-            this.noofGemsDataGridViewTextBoxColumn.DataPropertyName = "No_of_Gems";
-            this.noofGemsDataGridViewTextBoxColumn.HeaderText = "No_of_Gems";
-            this.noofGemsDataGridViewTextBoxColumn.Name = "noofGemsDataGridViewTextBoxColumn";
-            this.noofGemsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // noofotherGemsDataGridViewTextBoxColumn
-            // 
-            this.noofotherGemsDataGridViewTextBoxColumn.DataPropertyName = "No_of_other_Gems";
-            this.noofotherGemsDataGridViewTextBoxColumn.HeaderText = "No_of_other_Gems";
-            this.noofotherGemsDataGridViewTextBoxColumn.Name = "noofotherGemsDataGridViewTextBoxColumn";
-            this.noofotherGemsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // otherGemsDataGridViewTextBoxColumn
-            // 
-            this.otherGemsDataGridViewTextBoxColumn.DataPropertyName = "Other_Gems";
-            this.otherGemsDataGridViewTextBoxColumn.HeaderText = "Other_Gems";
-            this.otherGemsDataGridViewTextBoxColumn.Name = "otherGemsDataGridViewTextBoxColumn";
-            this.otherGemsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // weightofotherGemsDataGridViewTextBoxColumn
-            // 
-            this.weightofotherGemsDataGridViewTextBoxColumn.DataPropertyName = "Weight_of_other_Gems";
-            this.weightofotherGemsDataGridViewTextBoxColumn.HeaderText = "Weight_of_other_Gems";
-            this.weightofotherGemsDataGridViewTextBoxColumn.Name = "weightofotherGemsDataGridViewTextBoxColumn";
-            this.weightofotherGemsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // imageDataGridViewImageColumn
-            // 
-            this.imageDataGridViewImageColumn.DataPropertyName = "Image";
-            this.imageDataGridViewImageColumn.HeaderText = "Image";
-            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            // 
-            // createDateDataGridViewTextBoxColumn
-            // 
-            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "Create_Date";
-            this.createDateDataGridViewTextBoxColumn.HeaderText = "Create_Date";
-            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
-            // 
-            // updateDateDataGridViewTextBoxColumn
-            // 
-            this.updateDateDataGridViewTextBoxColumn.DataPropertyName = "Update_Date";
-            this.updateDateDataGridViewTextBoxColumn.HeaderText = "Update_Date";
-            this.updateDateDataGridViewTextBoxColumn.Name = "updateDateDataGridViewTextBoxColumn";
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            // 
-            // updateUserIDDataGridViewTextBoxColumn
-            // 
-            this.updateUserIDDataGridViewTextBoxColumn.DataPropertyName = "Update_UserID";
-            this.updateUserIDDataGridViewTextBoxColumn.HeaderText = "Update_UserID";
-            this.updateUserIDDataGridViewTextBoxColumn.Name = "updateUserIDDataGridViewTextBoxColumn";
-            // 
-            // imagepathDataGridViewTextBoxColumn
-            // 
-            this.imagepathDataGridViewTextBoxColumn.DataPropertyName = "Imagepath";
-            this.imagepathDataGridViewTextBoxColumn.HeaderText = "Imagepath";
-            this.imagepathDataGridViewTextBoxColumn.Name = "imagepathDataGridViewTextBoxColumn";
-            this.imagepathDataGridViewTextBoxColumn.Visible = false;
             // 
             // stockEntryBindingSource
             // 
@@ -370,13 +199,100 @@
             // 
             this.stock_EntryTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(85)))), ((int)(((byte)(114)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Stock_ID,
+            this.Item_Description,
+            this.Quantity,
+            this.Weight,
+            this.Cost,
+            this.ItemImage,
+            this.Create_Date,
+            this.UserID,
+            this.Update_Date,
+            this.Update_UserID});
+            this.dataGridView1.Location = new System.Drawing.Point(53, 182);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1110, 650);
+            this.dataGridView1.TabIndex = 66;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Stock_ID
+            // 
+            this.Stock_ID.HeaderText = "StockNo";
+            this.Stock_ID.Name = "Stock_ID";
+            this.Stock_ID.ReadOnly = true;
+            // 
+            // Item_Description
+            // 
+            this.Item_Description.HeaderText = "Description";
+            this.Item_Description.Name = "Item_Description";
+            this.Item_Description.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Weight
+            // 
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            // 
+            // Cost
+            // 
+            this.Cost.HeaderText = "Cost";
+            this.Cost.Name = "Cost";
+            this.Cost.ReadOnly = true;
+            // 
+            // ItemImage
+            // 
+            this.ItemImage.HeaderText = "Image";
+            this.ItemImage.Name = "ItemImage";
+            this.ItemImage.ReadOnly = true;
+            // 
+            // Create_Date
+            // 
+            this.Create_Date.HeaderText = "Create Date";
+            this.Create_Date.Name = "Create_Date";
+            this.Create_Date.ReadOnly = true;
+            // 
+            // UserID
+            // 
+            this.UserID.HeaderText = "UserID";
+            this.UserID.Name = "UserID";
+            this.UserID.ReadOnly = true;
+            // 
+            // Update_Date
+            // 
+            this.Update_Date.HeaderText = "Update Date";
+            this.Update_Date.Name = "Update_Date";
+            this.Update_Date.ReadOnly = true;
+            // 
+            // Update_UserID
+            // 
+            this.Update_UserID.HeaderText = "Update UserID";
+            this.Update_UserID.Name = "Update_UserID";
+            this.Update_UserID.ReadOnly = true;
+            // 
             // Stocks_Gems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(85)))), ((int)(((byte)(114)))));
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuMetroTextbox1);
             this.Controls.Add(this.btnrefresh);
             this.Controls.Add(this.bunifuFlatButton1);
@@ -387,9 +303,9 @@
             this.Size = new System.Drawing.Size(1193, 860);
             this.Load += new System.EventHandler(this.Stocks_Gems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockEntryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCJ_SYSTEM_DBDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,28 +319,19 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource stockEntryBindingSource;
         private PCJ_SYSTEM_DBDataSet2 pCJ_SYSTEM_DBDataSet2;
         private PCJ_SYSTEM_DBDataSet2TableAdapters.Stock_EntryTableAdapter stock_EntryTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noofpiecesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gemTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noofGemsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noofotherGemsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otherGemsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightofotherGemsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn updateDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn updateUserIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imagepathDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item_Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewImageColumn ItemImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Create_Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Update_Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Update_UserID;
     }
 }

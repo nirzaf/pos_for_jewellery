@@ -99,9 +99,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(37, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 22);
+            this.label5.Size = new System.Drawing.Size(168, 22);
             this.label5.TabIndex = 2;
-            this.label5.Text = "No_of_Pieces       :";
+            this.label5.Text = "Nr. of Pcs              :";
             // 
             // label2
             // 
@@ -111,9 +111,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(37, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 22);
+            this.label2.Size = new System.Drawing.Size(171, 22);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Gems                     :";
+            this.label2.Text = "Description            :";
             // 
             // txtstock_no
             // 
@@ -123,7 +123,7 @@
             this.txtstock_no.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtstock_no.ForeColor = System.Drawing.Color.White;
             this.txtstock_no.Location = new System.Drawing.Point(334, 57);
-            this.txtstock_no.Margin = new System.Windows.Forms.Padding(2);
+            this.txtstock_no.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtstock_no.Name = "txtstock_no";
             this.txtstock_no.ReadOnly = true;
             this.txtstock_no.Size = new System.Drawing.Size(88, 22);
@@ -133,20 +133,21 @@
             // 
             this.txtno_of_peices.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.txtno_of_peices.Location = new System.Drawing.Point(242, 120);
-            this.txtno_of_peices.Margin = new System.Windows.Forms.Padding(2);
+            this.txtno_of_peices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtno_of_peices.Name = "txtno_of_peices";
             this.txtno_of_peices.Size = new System.Drawing.Size(203, 24);
             this.txtno_of_peices.TabIndex = 3;
             this.txtno_of_peices.Text = "0";
+            this.txtno_of_peices.TextChanged += new System.EventHandler(this.txtno_of_peices_TextChanged);
             // 
             // pb1
             // 
             this.pb1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pb1.Location = new System.Drawing.Point(982, 69);
+            this.pb1.Location = new System.Drawing.Point(917, 68);
             this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(189, 159);
+            this.pb1.Size = new System.Drawing.Size(182, 159);
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1.TabIndex = 84;
             this.pb1.TabStop = false;
@@ -156,7 +157,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 14F);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(978, 32);
+            this.label19.Location = new System.Drawing.Point(914, 29);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(137, 22);
             this.label19.TabIndex = 5;
@@ -176,10 +177,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(30, 155);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(1240, 299);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1130, 299);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Details";
@@ -203,7 +204,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(543, 119);
+            this.label6.Location = new System.Drawing.Point(509, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 22);
             this.label6.TabIndex = 3;
@@ -215,40 +216,43 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(544, 171);
+            this.label3.Location = new System.Drawing.Point(510, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 22);
+            this.label3.Size = new System.Drawing.Size(124, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Cost              :";
+            this.label3.Text = "Price             :";
             // 
             // TB_File_Path
             // 
             this.TB_File_Path.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TB_File_Path.Location = new System.Drawing.Point(32, 121);
+            this.TB_File_Path.Location = new System.Drawing.Point(239, 67);
             this.TB_File_Path.Name = "TB_File_Path";
-            this.TB_File_Path.Size = new System.Drawing.Size(399, 20);
+            this.TB_File_Path.Size = new System.Drawing.Size(312, 20);
             this.TB_File_Path.TabIndex = 100;
             this.TB_File_Path.Text = "C:\\\\STOCKIMAGES\\\\";
+            this.TB_File_Path.Visible = false;
             // 
             // txt_weight
             // 
             this.txt_weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_weight.Location = new System.Drawing.Point(728, 275);
-            this.txt_weight.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_weight.Location = new System.Drawing.Point(694, 275);
+            this.txt_weight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_weight.Name = "txt_weight";
             this.txt_weight.Size = new System.Drawing.Size(189, 24);
             this.txt_weight.TabIndex = 5;
             this.txt_weight.Text = "0";
+            this.txt_weight.TextChanged += new System.EventHandler(this.txt_weight_TextChanged);
             // 
             // txt_cost
             // 
             this.txt_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_cost.Location = new System.Drawing.Point(728, 323);
-            this.txt_cost.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_cost.Location = new System.Drawing.Point(694, 323);
+            this.txt_cost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_cost.Name = "txt_cost";
             this.txt_cost.Size = new System.Drawing.Size(189, 24);
             this.txt_cost.TabIndex = 6;
             this.txt_cost.Text = "0";
+            this.txt_cost.TextChanged += new System.EventHandler(this.txt_cost_TextChanged);
             // 
             // btnsave
             // 
@@ -270,10 +274,10 @@
             this.btnsave.IconRightVisible = true;
             this.btnsave.IconRightZoom = 0D;
             this.btnsave.IconVisible = true;
-            this.btnsave.IconZoom = 60D;
+            this.btnsave.IconZoom = 50D;
             this.btnsave.IsTab = false;
-            this.btnsave.Location = new System.Drawing.Point(946, 75);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsave.Location = new System.Drawing.Point(847, 75);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnsave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -293,7 +297,7 @@
             this.btnupdate.BackColor = System.Drawing.Color.DarkCyan;
             this.btnupdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnupdate.BorderRadius = 0;
-            this.btnupdate.ButtonText = "  Update";
+            this.btnupdate.ButtonText = "     Update";
             this.btnupdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnupdate.DisabledColor = System.Drawing.Color.Gray;
             this.btnupdate.Iconcolor = System.Drawing.Color.Transparent;
@@ -308,8 +312,8 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 60D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(770, 75);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnupdate.Location = new System.Drawing.Point(847, 75);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnupdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -317,7 +321,7 @@
             this.btnupdate.selected = false;
             this.btnupdate.Size = new System.Drawing.Size(153, 47);
             this.btnupdate.TabIndex = 9;
-            this.btnupdate.Text = "  Update";
+            this.btnupdate.Text = "     Update";
             this.btnupdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnupdate.Textcolor = System.Drawing.Color.White;
             this.btnupdate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,7 +333,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "        Upload";
+            this.bunifuFlatButton1.ButtonText = "            Upload";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.ForeColor = System.Drawing.Color.Coral;
@@ -345,16 +349,16 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(1014, 399);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(948, 399);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(188, 32);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(180, 32);
             this.bunifuFlatButton1.TabIndex = 7;
-            this.bunifuFlatButton1.Text = "        Upload";
+            this.bunifuFlatButton1.Text = "            Upload";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -362,8 +366,8 @@
             // 
             // Stock_Type
             // 
-            this.Stock_Type.Location = new System.Drawing.Point(517, 106);
-            this.Stock_Type.Margin = new System.Windows.Forms.Padding(2);
+            this.Stock_Type.Location = new System.Drawing.Point(101, 96);
+            this.Stock_Type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Stock_Type.Name = "Stock_Type";
             this.Stock_Type.Size = new System.Drawing.Size(134, 20);
             this.Stock_Type.TabIndex = 1;
@@ -373,8 +377,8 @@
             // 
             // txt_ID
             // 
-            this.txt_ID.Location = new System.Drawing.Point(517, 75);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ID.Location = new System.Drawing.Point(101, 67);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(134, 20);
             this.txt_ID.TabIndex = 0;
@@ -386,7 +390,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 66);
+            this.label1.Location = new System.Drawing.Point(4, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(299, 31);
             this.label1.TabIndex = 21;
@@ -399,7 +403,7 @@
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "  Delete";
+            this.bunifuFlatButton3.ButtonText = "                Delete";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -412,10 +416,10 @@
             this.bunifuFlatButton3.IconRightVisible = true;
             this.bunifuFlatButton3.IconRightZoom = 0D;
             this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 60D;
+            this.bunifuFlatButton3.IconZoom = 50D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(1117, 75);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(1007, 75);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -423,7 +427,7 @@
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(153, 47);
             this.bunifuFlatButton3.TabIndex = 10;
-            this.bunifuFlatButton3.Text = "  Delete";
+            this.bunifuFlatButton3.Text = "                Delete";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,7 +443,7 @@
             "UG",
             "MG"});
             this.cmbStockType.Location = new System.Drawing.Point(274, 213);
-            this.cmbStockType.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbStockType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStockType.Name = "cmbStockType";
             this.cmbStockType.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbStockType.Size = new System.Drawing.Size(70, 21);
@@ -449,7 +453,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(390, 78);
+            this.label11.Location = new System.Drawing.Point(39, 67);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 22;
@@ -459,7 +463,7 @@
             // hello
             // 
             this.hello.AutoSize = true;
-            this.hello.Location = new System.Drawing.Point(416, 92);
+            this.hello.Location = new System.Drawing.Point(39, 85);
             this.hello.Name = "hello";
             this.hello.Size = new System.Drawing.Size(13, 13);
             this.hello.TabIndex = 23;
@@ -483,7 +487,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(150, 487);
+            this.pictureBox2.Location = new System.Drawing.Point(146, 487);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(111, 93);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -495,7 +499,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(274, 487);
+            this.pictureBox3.Location = new System.Drawing.Point(266, 487);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(108, 93);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -507,7 +511,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Location = new System.Drawing.Point(395, 487);
+            this.pictureBox4.Location = new System.Drawing.Point(383, 487);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(108, 93);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -519,7 +523,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(517, 487);
+            this.pictureBox5.Location = new System.Drawing.Point(501, 487);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(108, 93);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -531,7 +535,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Location = new System.Drawing.Point(640, 487);
+            this.pictureBox6.Location = new System.Drawing.Point(620, 487);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(108, 93);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -543,7 +547,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Location = new System.Drawing.Point(762, 487);
+            this.pictureBox7.Location = new System.Drawing.Point(738, 487);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(108, 93);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -555,7 +559,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Location = new System.Drawing.Point(885, 486);
+            this.pictureBox8.Location = new System.Drawing.Point(855, 486);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(108, 93);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -567,7 +571,7 @@
             this.pictureBox9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Location = new System.Drawing.Point(1008, 486);
+            this.pictureBox9.Location = new System.Drawing.Point(972, 486);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(108, 93);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -600,7 +604,7 @@
             this.btnuploadimages.BackColor = System.Drawing.Color.DarkCyan;
             this.btnuploadimages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnuploadimages.BorderRadius = 0;
-            this.btnuploadimages.ButtonText = "Uploading images ";
+            this.btnuploadimages.ButtonText = "";
             this.btnuploadimages.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnuploadimages.DisabledColor = System.Drawing.Color.Gray;
             this.btnuploadimages.ForeColor = System.Drawing.Color.Coral;
@@ -614,18 +618,17 @@
             this.btnuploadimages.IconRightVisible = true;
             this.btnuploadimages.IconRightZoom = 0D;
             this.btnuploadimages.IconVisible = true;
-            this.btnuploadimages.IconZoom = 40D;
+            this.btnuploadimages.IconZoom = 65D;
             this.btnuploadimages.IsTab = false;
-            this.btnuploadimages.Location = new System.Drawing.Point(1123, 516);
-            this.btnuploadimages.Margin = new System.Windows.Forms.Padding(4);
+            this.btnuploadimages.Location = new System.Drawing.Point(1095, 505);
+            this.btnuploadimages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnuploadimages.Name = "btnuploadimages";
             this.btnuploadimages.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnuploadimages.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnuploadimages.OnHoverTextColor = System.Drawing.Color.White;
             this.btnuploadimages.selected = false;
-            this.btnuploadimages.Size = new System.Drawing.Size(147, 32);
+            this.btnuploadimages.Size = new System.Drawing.Size(50, 54);
             this.btnuploadimages.TabIndex = 11;
-            this.btnuploadimages.Text = "Uploading images ";
             this.btnuploadimages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnuploadimages.Textcolor = System.Drawing.Color.White;
             this.btnuploadimages.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -637,7 +640,7 @@
             this.btnrefresh.BackColor = System.Drawing.Color.DarkCyan;
             this.btnrefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnrefresh.BorderRadius = 0;
-            this.btnrefresh.ButtonText = "   Refresh";
+            this.btnrefresh.ButtonText = "                 Refresh";
             this.btnrefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnrefresh.DisabledColor = System.Drawing.Color.Gray;
             this.btnrefresh.Iconcolor = System.Drawing.Color.Transparent;
@@ -652,8 +655,8 @@
             this.btnrefresh.IconVisible = true;
             this.btnrefresh.IconZoom = 60D;
             this.btnrefresh.IsTab = false;
-            this.btnrefresh.Location = new System.Drawing.Point(1137, 121);
-            this.btnrefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnrefresh.Location = new System.Drawing.Point(1007, 75);
+            this.btnrefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnrefresh.Name = "btnrefresh";
             this.btnrefresh.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnrefresh.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -661,7 +664,7 @@
             this.btnrefresh.selected = false;
             this.btnrefresh.Size = new System.Drawing.Size(153, 47);
             this.btnrefresh.TabIndex = 101;
-            this.btnrefresh.Text = "   Refresh";
+            this.btnrefresh.Text = "                 Refresh";
             this.btnrefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnrefresh.Textcolor = System.Drawing.Color.White;
             this.btnrefresh.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -679,16 +682,17 @@
             this.panel2.Controls.Add(this.pictureBox14);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1303, 42);
+            this.panel2.Size = new System.Drawing.Size(1178, 42);
             this.panel2.TabIndex = 102;
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(1233, 5);
+            this.pictureBox12.Location = new System.Drawing.Point(1095, 5);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(33, 33);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -699,7 +703,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(1263, 4);
+            this.pictureBox13.Location = new System.Drawing.Point(1125, 4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(36, 34);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -754,9 +758,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
-            this.ClientSize = new System.Drawing.Size(1303, 611);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1178, 611);
+            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnrefresh);
+            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.TB_File_Path);
             this.Controls.Add(this.txt_gems);
             this.Controls.Add(this.txt_weight);
@@ -775,13 +781,10 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cmbStockType);
             this.Controls.Add(this.bunifuFlatButton3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Stock_Type);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnupdate);
-            this.Controls.Add(this.btnsave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "S_Gems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -801,6 +804,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
