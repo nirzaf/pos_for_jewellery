@@ -17,7 +17,7 @@ namespace PCJ_System
         {
             InitializeComponent();
 
-            using (var conn = new DB_CONNECTION().getConnection())
+            using (var conn = new DB_CONNECTION().GetConnection())
             {
                 using (var cmd = new SqlCommand("SELECT [FC_TYPE] FROM dbo.[F_Currency]", conn))
                 {
@@ -36,7 +36,7 @@ namespace PCJ_System
         {
 
             DB_CONNECTION x = new DB_CONNECTION();
-            SqlConnection conn = x.getConnection();
+            SqlConnection conn = x.GetConnection();
             String UpdateQuery = "Update F_Currency set FC_Rate ='" + textBox1.Text + "' where FC_TYPE ='" + comboBox1.Text + "';";
             SqlDataAdapter execute = new SqlDataAdapter(UpdateQuery, conn);
             execute.SelectCommand.ExecuteNonQuery();
@@ -50,7 +50,7 @@ namespace PCJ_System
         {
             try {
                 DB_CONNECTION x = new DB_CONNECTION();
-                using (SqlConnection conn = x.getConnection())
+                using (SqlConnection conn = x.GetConnection())
                 {
                     Console.WriteLine(comboBox1.Text);
                     using (var command = new SqlCommand("SELECT [FC_RATE] FROM dbo.[F_Currency] where [FC_TYPE]=@FC_Type", conn))

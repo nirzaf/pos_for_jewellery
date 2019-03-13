@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,12 +12,12 @@ namespace PCJ_System
     {
         // SqlConnection conn;
 
-        public SqlConnection getConnection()
+        public SqlConnection GetConnection()
         {
             SqlConnection conn = null; ;
             try
             {
-                conn = new SqlConnection("data source= DESKTOP-ULUP989\\SQLEXPRESS;initial catalog=PCJ_SYSTEM_DB; Integrated Security=True;");
+                conn = new SqlConnection("data source=.\\SQLEXPRESS01; initial catalog=PCJ_SYSTEM_DB; Integrated Security=True;");
                 conn.Open();
             }
             catch (Exception ex)

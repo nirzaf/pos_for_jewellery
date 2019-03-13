@@ -42,7 +42,7 @@ namespace PCJ_System
             {
 
                 DB_CONNECTION dbObj = new DB_CONNECTION();
-                conn = dbObj.getConnection();
+                conn = dbObj.GetConnection();
             }
 
             catch (Exception ex)

@@ -234,3 +234,6 @@ C:\ppppppppppp\Final System\PCJ_System\bin\Debug\PCJ_System.exe.config
 C:\ppppppppppp\Final System\PCJ_System\obj\Debug\PCJ_System.exe
 C:\ppppppppppp\Final System\PCJ_System\obj\Debug\PCJ_System.pdb
 C:\Final System\PCJ_System\bin\Debug\GitHub.dll
+D:\pos_for_jewellery\PCJ_System\obj\Debug\PCJ_System.csprojAssemblyReference.cache
+D:\pos_for_jewellery\PCJ_System\obj\Debug\PCJ_System.exe
+D:\pos_for_jewellery\PCJ_System\obj\Debug\PCJ_System.pdb
