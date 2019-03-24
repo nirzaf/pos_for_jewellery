@@ -234,7 +234,6 @@ namespace PCJ_System
             {
                 Image image = Bitmap.FromFile(dlgOpenFileDialog.FileName);
                 pb1.Image = image;
-
             }
         }
 
