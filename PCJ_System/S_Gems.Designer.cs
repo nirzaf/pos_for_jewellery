@@ -123,7 +123,7 @@
             this.txtstock_no.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtstock_no.ForeColor = System.Drawing.Color.White;
             this.txtstock_no.Location = new System.Drawing.Point(334, 57);
-            this.txtstock_no.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstock_no.Margin = new System.Windows.Forms.Padding(2);
             this.txtstock_no.Name = "txtstock_no";
             this.txtstock_no.ReadOnly = true;
             this.txtstock_no.Size = new System.Drawing.Size(88, 22);
@@ -133,7 +133,7 @@
             // 
             this.txtno_of_peices.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.txtno_of_peices.Location = new System.Drawing.Point(242, 120);
-            this.txtno_of_peices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtno_of_peices.Margin = new System.Windows.Forms.Padding(2);
             this.txtno_of_peices.Name = "txtno_of_peices";
             this.txtno_of_peices.Size = new System.Drawing.Size(203, 24);
             this.txtno_of_peices.TabIndex = 3;
@@ -151,6 +151,7 @@
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1.TabIndex = 84;
             this.pb1.TabStop = false;
+            this.pb1.Click += new System.EventHandler(this.Pb1_Click);
             // 
             // label19
             // 
@@ -177,9 +178,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(30, 155);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(1130, 299);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
@@ -236,7 +237,7 @@
             // 
             this.txt_weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.txt_weight.Location = new System.Drawing.Point(694, 275);
-            this.txt_weight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_weight.Margin = new System.Windows.Forms.Padding(2);
             this.txt_weight.Name = "txt_weight";
             this.txt_weight.Size = new System.Drawing.Size(189, 24);
             this.txt_weight.TabIndex = 5;
@@ -247,7 +248,7 @@
             // 
             this.txt_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.txt_cost.Location = new System.Drawing.Point(694, 323);
-            this.txt_cost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_cost.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cost.Name = "txt_cost";
             this.txt_cost.Size = new System.Drawing.Size(189, 24);
             this.txt_cost.TabIndex = 6;
@@ -277,7 +278,7 @@
             this.btnsave.IconZoom = 50D;
             this.btnsave.IsTab = false;
             this.btnsave.Location = new System.Drawing.Point(847, 75);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnsave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -313,7 +314,7 @@
             this.btnupdate.IconZoom = 60D;
             this.btnupdate.IsTab = false;
             this.btnupdate.Location = new System.Drawing.Point(847, 75);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnupdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -350,7 +351,7 @@
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(948, 399);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -367,7 +368,7 @@
             // Stock_Type
             // 
             this.Stock_Type.Location = new System.Drawing.Point(101, 96);
-            this.Stock_Type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Stock_Type.Margin = new System.Windows.Forms.Padding(2);
             this.Stock_Type.Name = "Stock_Type";
             this.Stock_Type.Size = new System.Drawing.Size(134, 20);
             this.Stock_Type.TabIndex = 1;
@@ -378,7 +379,7 @@
             // txt_ID
             // 
             this.txt_ID.Location = new System.Drawing.Point(101, 67);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(134, 20);
             this.txt_ID.TabIndex = 0;
@@ -419,7 +420,7 @@
             this.bunifuFlatButton3.IconZoom = 50D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(1007, 75);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.DarkCyan;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -443,7 +444,7 @@
             "UG",
             "MG"});
             this.cmbStockType.Location = new System.Drawing.Point(274, 213);
-            this.cmbStockType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbStockType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbStockType.Name = "cmbStockType";
             this.cmbStockType.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbStockType.Size = new System.Drawing.Size(70, 21);
@@ -621,7 +622,7 @@
             this.btnuploadimages.IconZoom = 65D;
             this.btnuploadimages.IsTab = false;
             this.btnuploadimages.Location = new System.Drawing.Point(1095, 505);
-            this.btnuploadimages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnuploadimages.Margin = new System.Windows.Forms.Padding(4);
             this.btnuploadimages.Name = "btnuploadimages";
             this.btnuploadimages.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnuploadimages.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -656,7 +657,7 @@
             this.btnrefresh.IconZoom = 60D;
             this.btnrefresh.IsTab = false;
             this.btnrefresh.Location = new System.Drawing.Point(1007, 75);
-            this.btnrefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnrefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnrefresh.Name = "btnrefresh";
             this.btnrefresh.Normalcolor = System.Drawing.Color.DarkCyan;
             this.btnrefresh.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));

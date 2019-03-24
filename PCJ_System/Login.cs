@@ -70,7 +70,7 @@ namespace PCJ_System
                     {
                         //sha1.Initialize();
                         byte[] data = sha1.ComputeHash(Encoding.UTF8.GetBytes(txtpassword.Text));
-                        
+
                         StringBuilder sb = new StringBuilder();
                         for (int i = 0; i < data.Length; ++i)
                         {
@@ -81,6 +81,10 @@ namespace PCJ_System
 
                     selectCommand.Parameters.Add(new SqlParameter("PASS", password));
                     string UserType = null;
+                    if (ConnectionState.Closed == conn.State)
+                    {
+                        conn.Open();
+                    }
                     SqlDataReader reader = selectCommand.ExecuteReader();
                     bool rowfound = reader.HasRows;
                     if (rowfound)
@@ -92,7 +96,7 @@ namespace PCJ_System
                             if (UserType == "Administrator")
                             {
                                 GlobalVariablesClass.VariableOne = txtusername.Text;
-                               // MessageBox.Show("Welcome ", "Admin Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                // MessageBox.Show("Welcome ", "Admin Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Admin_Menu frm = new Admin_Menu();
                                 frm.SetUserType(UserType);
                                 frm.bunifuFlatButton3.Visible = true;
@@ -100,7 +104,7 @@ namespace PCJ_System
                                 frm.SC_JE.Visible = true;
                                 frm.bunifuFlatButton5.Visible = true;
                                 frm.Show();
-                               
+
                                 this.Hide();
                             }
                             else if (UserType == "StockController")
@@ -116,8 +120,6 @@ namespace PCJ_System
                                 frm.SC_GEMS.Visible = true;
                                 frm.SC_JEWLRY.Visible = true;
                                 frm.Show();
-
-
                                 this.Hide();
                             }
                         }
@@ -125,7 +127,7 @@ namespace PCJ_System
 
                     else
                     {
-                        MessageBox.Show(" Invalid User Or Password ", "Login ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid User Or Password", "Login ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     reader.Close();
                 }

@@ -17,7 +17,7 @@ namespace PCJ_System
             SqlConnection conn = null; ;
             try
             {
-                conn = new SqlConnection("data source=.\\SQLEXPRESS01; initial catalog=PCJ_SYSTEM_DB; Integrated Security=True;");
+                conn = new SqlConnection("data source=.\\SQLEXPRESS01; initial catalog=PCJ_SYSTEM_DB; Integrated Security=True; MultipleActiveResultSets=True;");
                 conn.Open();
             }
             catch (Exception ex)

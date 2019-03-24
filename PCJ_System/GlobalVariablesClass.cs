@@ -14,7 +14,6 @@ namespace PCJ_System
         {
             get { return v_VariableOne; }
             set { v_VariableOne = value; }
-        }
-       
+        }     
     }
 }

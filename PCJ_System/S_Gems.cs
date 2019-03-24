@@ -28,7 +28,7 @@ namespace PCJ_System
 
         private string stockId = "001";
         private string stockNo = "";
-       
+
 
         public static class GlobalValue
         {
@@ -62,7 +62,7 @@ namespace PCJ_System
             pictureBoxes[6] = pictureBox7;
             pictureBoxes[7] = pictureBox8;
             pictureBoxes[8] = pictureBox9;
-            
+
             picturePaths = new string[pictureBoxes.Length];
             pictureIsNew = new bool[pictureBoxes.Length];
 
@@ -97,7 +97,8 @@ namespace PCJ_System
             {
                 errorProvider1.SetError(txt_cost, "Cannot be empty, Enter the Cost of Gems");
             }
-            else if (pb1.Image == null) {
+            else if (pb1.Image == null)
+            {
                 errorProvider1.SetError(pb1, "Please add an Image");
             }
             else
@@ -166,7 +167,8 @@ namespace PCJ_System
                         byte[] pic = stream.ToArray();
                         command.Parameters.Add("@image", SqlDbType.Binary);
                         command.Parameters["@image"].Value = pic;
-                    } else
+                    }
+                    else
                     {
                         command.Parameters.Add("@image", SqlDbType.Binary);
                         command.Parameters["@image"].Value = new byte[0];
@@ -224,8 +226,10 @@ namespace PCJ_System
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlgOpenFileDialog = new OpenFileDialog();
-            dlgOpenFileDialog.Filter = "jpg files(*.jpg|*.jpg|png files(*.png)|*.png|All files(*.*)|*.*";
+            OpenFileDialog dlgOpenFileDialog = new OpenFileDialog
+            {
+                Filter = "jpg files(*.jpg|*.jpg|png files(*.png)|*.png|All files(*.*)|*.*"
+            };
             if (dlgOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Image image = Bitmap.FromFile(dlgOpenFileDialog.FileName);
@@ -255,7 +259,7 @@ namespace PCJ_System
                 conn.Open();
                 String query;
                 String query2;
-                
+
                 if (pb1.Image == null)
                 {
                     query = "Update Stock_Entry  set No_of_pieces = @No_of_pieces, Gem_Type = @Gem_Type, Weight = @Weight, Cost = @Cost, Update_Date = @Update_Date, Update_UserID=@Update_UserID, Imagepath= @Imagepath WHERE  Stock_No = @Stock_No AND Stock_ID=@Stock_ID";
@@ -354,7 +358,7 @@ namespace PCJ_System
                 command.Parameters.AddWithValue("Stock_No", stockNo);
                 command.Parameters.AddWithValue("Stock_ID", stockId);
 
-                String DeleteQ2= "Delete from Status_of_Stocks where StockNo=@StockNo AND StockID=@StockID";
+                String DeleteQ2 = "Delete from Status_of_Stocks where StockNo=@StockNo AND StockID=@StockID";
                 SqlCommand command2 = new SqlCommand(DeleteQ2, conn);
                 command2.Parameters.AddWithValue("StockNo", stockNo);
                 command2.Parameters.AddWithValue("StockID", stockId);
@@ -363,8 +367,8 @@ namespace PCJ_System
                 command.ExecuteNonQuery();
                 command2.ExecuteNonQuery();
                 MessageBox.Show("You've deleted successfully!", "Successful Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               conn.Close();
-               this.Close();
+                conn.Close();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -419,7 +423,7 @@ namespace PCJ_System
 
         }
 
-       
+
         private void S_Gems_Load_1(object sender, EventArgs e)
         {
             //getLastNumbers();
@@ -434,18 +438,20 @@ namespace PCJ_System
 
             String path = (TB_File_Path.Text + txtstock_no.Text + "\\");
             //string imgdir = this.dataGridView1.CurrentRow.Cells[17].Value.ToString();
-            try {
+            try
+            {
                 string[] imgs = Directory.GetFiles(path, "*.Jpg");
 
                 for (xy = 0; xy < imgs.Length && xy < pictureBoxes.Length; ++xy)
                 {
                     pictureBoxes[xy].Image = Image.FromFile(imgs[xy]);
                     picturePaths[xy] = imgs[xy];
-                   // MessageBox.Show(imgs[i]);
+                    // MessageBox.Show(imgs[i]);
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-               // MessageBox.Show(ex.ToString(), "Error Message: No Images", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error Message: No Images", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -490,8 +496,10 @@ namespace PCJ_System
             try
             {
                 xy %= pictureBoxes.Length;
-                OpenFileDialog opFile = new OpenFileDialog();
-                opFile.Filter = "JPEG Files (*.jpg)|*.jpg";
+                OpenFileDialog opFile = new OpenFileDialog
+                {
+                    Filter = "JPEG Files (*.jpg)|*.jpg"
+                };
 
                 if (opFile.ShowDialog() == DialogResult.OK)
                 {
@@ -505,7 +513,7 @@ namespace PCJ_System
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
             /*  OpenFileDialog opFile = new OpenFileDialog();
               opFile.Filter = "png files(*.png)|*.png|jpg files(*.jpg|*.jpg|All files(*.*)|*.*";
               if (opFile.ShowDialog() == DialogResult.OK)
@@ -514,8 +522,8 @@ namespace PCJ_System
                   pictureBox1.Image = image;
               }
              */
-     // <---
-     
+            // <---
+
         }
 
         private void btnrefresh_Click(object sender, EventArgs e)
@@ -542,7 +550,7 @@ namespace PCJ_System
             txt_cost.Text = "";
             txt_gems.Text = "";
             cmbStockType.Text = "";
-        //    txtstock_no.Text = "";
+            //    txtstock_no.Text = "";
             pb1.Image = null;
             pictureBox1.Image = null;
             pictureBox2.Image = null;
@@ -606,6 +614,11 @@ namespace PCJ_System
                     txt_cost.Text = last_amount[index];
                 }
             }*/
+        }
+
+        private void Pb1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
